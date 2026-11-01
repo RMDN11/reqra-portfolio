@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Hafzone • Ruang Ujian & Bank Soal Tahfidz Mushaf Madinah</title>
+    <meta name="description"
+        content="Showcase platform Hafzone: Bank soal ujian tahfidz 30 juz berstandar Mushaf Madinah (604 halaman), timer soal 40 detik, dan penilaian otomatis.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reqra.my.id/hafzone-showcase.html">
+    <meta property="og:title" content="Hafzone • Showcase Platform Ujian Tahfidz Mushaf Madinah">
+    <meta property="og:description" content="Generator soal acak 30 juz, pembagian rentang 1/2 juz, timer soal otomatis dengan bel peringatan, dan penilaian standar pesantren.">
+    <meta name="theme-color" content="#090a0f">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        quran: ['"Amiri"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card-surface {
+            background-color: #12151e;
+            border: 1px solid #1f2533;
+            transition: border-color 0.2s ease;
+        }
+        .card-surface:hover {
+            border-color: #333d52;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.72rem;
+            font-family: 'JetBrains Mono', monospace;
+            background: #181d28;
+            color: #94a3b8;
+            border: 1px solid #242c3d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500/20 selection:text-emerald-300">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#090a0f]/95 backdrop-blur-md border-b border-[#1c2230]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reqra Logo" class="w-8 h-8 rounded-lg object-contain bg-[#12151e] border border-emerald-500/30 group-hover:border-emerald-400 transition-colors">
+                <div class="flex items-center gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-lg">REQRA</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-[#181d28] text-slate-400 border border-[#242c3d] font-mono">PORTFOLIO</span>
+                </div>
+            </a>
+
+            <!-- Showcase Quick Switcher (Desktop) -->
+            <div class="hidden lg:flex items-center gap-1.5 text-xs font-mono">
+                <a href="hafzone-showcase.html" class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition">Hafzone</a>
+                <a href="tahfidz-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">SIM Tahfidz</a>
+                <a href="jwdpolo-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">JWD Polo CRM</a>
+                <a href="restock-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Re-Stock</a>
+                <a href="motion-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Motion</a>
+                <a href="sosmed-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Sosmed</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Kembali</span>
+                </a>
+                <a href="https://wa.me/6285890160276?text=Halo%20Reqra,%20saya%20tertarik%20dengan%20platform%20ujian%20tahfidz%20Hafzone."
+                    target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Diskusi Hafzone</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono mb-4">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span>Product Showcase • Live Production Web App</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                    Hafzone App
+                </h1>
+                <p class="text-base sm:text-xl text-emerald-400 font-mono mb-4">Ruang Evaluasi Hafalan & Bank Soal Mushaf Madinah 30 Juz</p>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                    Aplikasi evaluasi ujian tahfidz berstandar Mushaf Rasm Utsmani Madinah (604 halaman). Dirancang untuk penguji pesantren dan rumah tahfidz guna menguji kelancaran santri secara objektif dengan generator soal acak berbobot, pengatur waktu soal otomatis 40 detik, serta scoring instan siap kirim via WhatsApp.
+                </p>
+
+                <!-- Tech Pills -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-pill"><i class="fa-brands fa-js text-amber-400"></i> JavaScript ES6+</span>
+                    <span class="tech-pill"><i class="fa-solid fa-wind text-sky-400"></i> Tailwind CSS</span>
+                    <span class="tech-pill"><i class="fa-solid fa-book-open text-emerald-400"></i> Mushaf Madinah 604 Hal</span>
+                    <span class="tech-pill"><i class="fa-solid fa-stopwatch text-rose-400"></i> Timer Soal 40s</span>
+                    <span class="tech-pill"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WA Report Formatter</span>
+                </div>
+            </div>
+
+            <!-- System Overview Graphic Banner -->
+            <div class="card-surface rounded-2xl overflow-hidden border border-slate-800 mb-12 shadow-2xl">
+                <div class="p-4 sm:p-5 border-b border-slate-800/80 flex items-center justify-between bg-[#0e121a]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-300 font-semibold uppercase tracking-wider">Arsitektur & Gambaran Sistem Hafzone</span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Live Web App</span>
+                </div>
+                <div class="relative bg-[#090b10] flex items-center justify-center">
+                    <img src="assets/images/hafzone-overview.png" alt="Gambaran Sistem Ujian Tahfidz Hafzone" class="w-full h-auto max-h-[520px] object-cover">
+                </div>
+                <div class="p-4 bg-[#0d1017] border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span><strong class="text-slate-200">Gambaran Alur:</strong> Pemilihan Juz & Rentang &rarr; Generator Soal Madinah &rarr; Timer 40 Detik & Bel Ujian &rarr; Evaluasi Nilai Romawi & WA Export</span>
+                    <span class="text-emerald-400 font-mono text-[11px]">Standar 604 Halaman</span>
+                </div>
+            </div>
+
+            <!-- Interactive Live Simulator Box -->
+            <div class="card-surface rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 mb-12">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-3">
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">Simulasi Interaktif</span>
+                        <h2 class="text-lg font-bold text-white">Modul Ujian & Evaluasi Kelancaran</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <button onclick="switchTab('generator')" id="tab-btn-generator" class="px-3 py-1 rounded-lg text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition">1. Generator Soal</button>
+                        <button onclick="switchTab('timer')" id="tab-btn-timer" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">2. Timer 40s & Bel</button>
+                        <button onclick="switchTab('rapor')" id="tab-btn-rapor" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">3. Format WhatsApp</button>
+                    </div>
+                </div>
+
+                <!-- Stats summary bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Total Juz & Surat</div>
+                        <div class="text-xl font-black text-white mt-0.5">30 Juz <span class="text-xs font-normal text-emerald-400">(114 Surat)</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Standar Halaman</div>
+                        <div class="text-xl font-black text-white mt-0.5">604 <span class="text-xs font-normal text-sky-400">Halaman</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Timer Soal</div>
+                        <div class="text-xl font-black text-white mt-0.5">40s <span class="text-xs font-normal text-rose-400">Bel 3x</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Metode Penilaian</div>
+                        <div class="text-xl font-black text-emerald-400 mt-0.5">Mumtaz <span class="text-xs font-normal text-slate-400">Romawi</span></div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Container -->
+                <div id="sim-content" class="bg-[#0b0e14] rounded-xl p-4 sm:p-5 border border-slate-800/80 min-h-[220px]">
+                    <!-- Rendered by JS below -->
+                </div>
+            </div>
+
+            <!-- Deep Dive Feature Modules -->
+            <div class="mb-14">
+                <div class="mb-8">
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Fitur & Keunggulan Rekayasa</span>
+                    <h3 class="text-2xl font-extrabold text-white">Mengapa Hafzone Berbeda?</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Modul 1 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-book-quran text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">1. Standar 604 Halaman Madinah</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Database disusun presisi mengikuti cetakan Al-Qur'an Standar Madinah (Rasm Utsmani), di mana tiap juz memiliki batas 20 halaman sehingga pertanyaan ujian tidak meleset.
+                        </p>
+                    </div>
+
+                    <!-- Modul 2 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-arrows-split-up-and-left text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">2. Filter Rentang 1/2 Juz</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Mendukung ujian bertahap (1/2 juz awal atau 1/2 juz akhir). Penguji cukup memilih sub-rentang, dan sistem otomatis memilihkan potongan ayat secara adil dan acak.
+                        </p>
+                    </div>
+
+                    <!-- Modul 3 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-bell text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">3. Timer 40 Detik & Bel Otomatis</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Standar waktu berpikir 40 detik per soal. Dilengkapi sinyal bunyi bel otomatis: bel ke-1 peringatan jeda, bel ke-2 bimbingan awalan ayat, dan bel ke-3 tanda lanjut soal berikutnya.
+                        </p>
+                    </div>
+
+                    <!-- Modul 4 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-award text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Standar Penilaian Romawi</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Penetapan nilai kelulusan sesuai kaidah pesantren tahfidz: Mumtaz (Istimewa), Jayyid Jiddan (Sangat Baik), Jayyid (Baik), dan Maqbul (Cukup) secara otomatis dari akumulasi skor.
+                        </p>
+                    </div>
+
+                    <!-- Modul 5 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">5. Format WhatsApp Sekali Klik</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Rekapitulasi nilai, surat yang diujikan, catatan kelancaran, serta predikat langsung diubah menjadi template chat WhatsApp rapi untuk dibagikan ke orang tua santri.
+                        </p>
+                    </div>
+
+                    <!-- Modul 6 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-bolt text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">6. Bebas Bloat & Super Cepat</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Dibuat dengan pendekatan vanilla modern tanpa dependensi berat. Dapat dibuka langsung dari smartphone penguji, tablet, atau laptop bahkan di area sinyal minim.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action & Live Integration Section -->
+            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-10 text-center">
+                <h3 class="text-2xl font-extrabold text-white mb-3">
+                    Ingin Mencoba Aplikasi Hafzone Secara Langsung?
+                </h3>
+                <p class="text-sm text-slate-400 max-w-xl mx-auto mb-6">
+                    Aplikasi Hafzone saat ini aktif digunakan untuk ujian santri. Anda dapat langsung membuka aplikasinya atau konsultasi kustomisasi untuk lembaga Anda.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://app.reqra.my.id/mhq" target="_blank" rel="noopener noreferrer"
+                        class="px-5 py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/10 flex items-center gap-2">
+                        <i class="fa-solid fa-play text-xs"></i>
+                        <span>Buka Hafzone Web App (Live)</span>
+                    </a>
+                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Reqra.%20Saya%20tertarik%20konsultasi%20sistem%20ujian%20tahfidz%20Hafzone%20untuk%20lembaga%20kami."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-200 font-semibold text-sm hover:bg-slate-700 border border-slate-700 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        <span>Konsultasi via WhatsApp</span>
+                    </a>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/60 text-xs text-slate-500">
+                    Sistem terintegrasi penuh dengan <a href="tahfidz-showcase.html" class="text-emerald-400 hover:underline">SIM Tahfidz Terpadu</a> untuk rapor semester otomatis.
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1c2230] bg-[#07080c] py-6 text-center text-xs text-slate-500 font-mono">
+        Reqra Studio &bull; Hafzone Showcase &bull; 2026
+    </footer>
+
+    <!-- Interactive Simulator Script -->
+    <script>
+        const sampleQuestions = [
+            { juz: 30, surat: "An-Naba'", ayat: "Ayat 1 - 10", teksArab: "عَمَّ يَتَسَاءَلُونَ ۝ عَنِ النَّبَإِ الْعَظِيمِ ۝", terjemahan: "Tentang apakah mereka saling bertanya-tanya? Tentang berita yang besar..." },
+            { juz: 29, surat: "Al-Mulk", ayat: "Ayat 14 - 20", teksArab: "أَلَا يَعْلَمُ مَنْ خَلَقَ وَهُوَ اللَّطِيفُ الْخَبِيرُ ۝", terjemahan: "Apakah (pantas) Allah yang menciptakan itu tidak mengetahui? Dan Dia Maha Halus, Maha Mengetahui..." },
+            { juz: 1, surat: "Al-Baqarah", ayat: "Ayat 21 - 25", teksArab: "يَا أَيُّهَا النَّاسُ اعْبُدُوا رَبَّكُمُ الَّذِي خَلَقَكُمْ وَالَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ ۝", terjemahan: "Wahai manusia! Sembahlah Tuhanmu yang telah menciptakan kamu dan orang-orang yang sebelum kamu..." }
+        ];
+
+        let currentQIndex = 0;
+        let timerInterval = null;
+        let timeLeft = 40;
+        let isRunning = false;
+
+        const tabContent = {
+            generator: `
+                <div class="space-y-4">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-[#121622] p-3 rounded-lg border border-slate-800">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-mono text-slate-400">Pilih Target:</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold">Juz 30 (Juz 'Amma)</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-xs">1/2 Juz Awal</span>
+                        </div>
+                        <button onclick="acakSoal()" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 text-slate-950 font-bold text-xs hover:bg-emerald-400 transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <span>Acak Soal Ujian Baru</span>
+                        </button>
+                    </div>
+
+                    <div id="soal-box" class="p-5 rounded-xl bg-[#090c12] border border-emerald-500/30">
+                        <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                            <span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-question mr-1"></i> Soal Ke-1 (Rentang Acak)</span>
+                            <span id="soal-meta">QS. An-Naba' : 1 - 10</span>
+                        </div>
+                        <div id="soal-teks" class="text-xl sm:text-2xl text-right font-quran text-emerald-200 leading-loose py-2">
+                            عَمَّ يَتَسَاءَلُونَ ۝ عَنِ النَّبَإِ الْعَظِيمِ ۝ الَّذِي هُمْ فِيهِ مُخْتَلِفُونَ ۝
+                        </div>
+                        <div id="soal-terjemahan" class="text-xs text-slate-400 italic mt-3 pt-3 border-t border-slate-800">
+                            "Lanjutkan ayat di atas hingga selesai ruku'..."
+                        </div>
+                    </div>
+                </div>
+            `,
+            timer: `
+                <div class="flex flex-col items-center justify-center py-4 space-y-4">
+                    <div class="text-center">
+                        <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">Standar Waktu Berpikir Santri</div>
+                        <div id="timer-display" class="font-mono text-5xl font-black text-white tracking-widest">
+                            00:40
+                        </div>
+                        <div id="timer-status" class="text-xs font-mono text-emerald-400 mt-1">Siap Dimulai</div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-2">
+                        <button onclick="startTimer()" id="btn-timer-toggle" class="px-4 py-2 rounded-lg bg-emerald-500 text-slate-950 font-bold text-xs hover:bg-emerald-400 transition flex items-center gap-1.5">
+                            <i class="fa-solid fa-play"></i> <span>Mulai Countdown</span>
+                        </button>
+                        <button onclick="resetTimer()" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 font-medium text-xs hover:bg-slate-700 transition">
+                            Reset
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-2 pt-2 text-xs font-mono text-slate-400">
+                        <span>Simulasi Bel:</span>
+                        <button onclick="ringBell(1)" class="px-2.5 py-1 rounded bg-slate-800 hover:text-white border border-slate-700">Bel 1 (Peringatan)</button>
+                        <button onclick="ringBell(2)" class="px-2.5 py-1 rounded bg-slate-800 hover:text-white border border-slate-700">Bel 2 (Bimbingan)</button>
+                        <button onclick="ringBell(3)" class="px-2.5 py-1 rounded bg-slate-800 hover:text-white border border-slate-700">Bel 3 (Lanjut)</button>
+                    </div>
+                </div>
+            `,
+            rapor: `
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+                        <span>Preview Pesan WhatsApp ke Wali:</span>
+                        <button onclick="salinTemplate()" class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold hover:bg-emerald-500/30 transition">
+                            <i class="fa-solid fa-copy mr-1"></i> Salin Teks
+                        </button>
+                    </div>
+                    <pre id="wa-preview" class="p-4 rounded-xl bg-[#07090e] border border-slate-800 font-mono text-xs text-slate-300 whitespace-pre-wrap leading-relaxed">
+*HASIL EVALUASI TAHFIDZ AL-QUR'AN*
+Lembaga: Markaz Tahfidz Al-Fatih
+Nama Santri: Muhammad Farhan
+Materi Ujian: Juz 30 (Standar Mushaf Madinah)
+Tanggal: 01 November 2026
+
+Rincian Nilai:
+1. Soal 1 (An-Naba'): 95 (Mumtaz)
+2. Soal 2 (Al-Muthaffifin): 90 (Jayyid Jiddan)
+3. Soal 3 (Al-A'la): 98 (Mumtaz)
+
+*Rata-rata: 94.3*
+*Predikat: MUMTAZ (Istimewa)*
+Catatan Penguji: Kelancaran sangat baik, makhraj huruf 'ain dan shad semakin mantap.
+                    </pre>
+                </div>
+            `
+        };
+
+        function switchTab(tab) {
+            ['generator', 'timer', 'rapor'].forEach(t => {
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (btn) {
+                    if (t === tab) {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition';
+                    } else {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition';
+                    }
+                }
+            });
+
+            const contentEl = document.getElementById('sim-content');
+            if (contentEl && tabContent[tab]) {
+                contentEl.innerHTML = tabContent[tab];
+                if (tab === 'timer') {
+                    updateTimerUI();
+                }
+            }
+        }
+
+        function acakSoal() {
+            currentQIndex = (currentQIndex + 1) % sampleQuestions.length;
+            const q = sampleQuestions[currentQIndex];
+            const meta = document.getElementById('soal-meta');
+            const teks = document.getElementById('soal-teks');
+            if (meta && teks) {
+                meta.innerText = `QS. ${q.surat} : ${q.ayat}`;
+                teks.innerText = q.teksArab;
+            }
+        }
+
+        function updateTimerUI() {
+            const display = document.getElementById('timer-display');
+            if (display) {
+                const s = timeLeft < 10 ? `0${timeLeft}` : timeLeft;
+                display.innerText = `00:${s}`;
+                if (timeLeft <= 10) {
+                    display.className = 'font-mono text-5xl font-black text-rose-400 tracking-widest animate-pulse';
+                } else {
+                    display.className = 'font-mono text-5xl font-black text-white tracking-widest';
+                }
+            }
+        }
+
+        function startTimer() {
+            if (isRunning) {
+                clearInterval(timerInterval);
+                isRunning = false;
+                const btn = document.getElementById('btn-timer-toggle');
+                if (btn) btn.innerHTML = '<i class="fa-solid fa-play"></i> <span>Lanjutkan</span>';
+                return;
+            }
+
+            isRunning = true;
+            const btn = document.getElementById('btn-timer-toggle');
+            if (btn) btn.innerHTML = '<i class="fa-solid fa-pause"></i> <span>Jeda</span>';
+            const status = document.getElementById('timer-status');
+            if (status) status.innerText = 'Timer Berjalan...';
+
+            timerInterval = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateTimerUI();
+                } else {
+                    clearInterval(timerInterval);
+                    isRunning = false;
+                    ringBell(3);
+                    const status = document.getElementById('timer-status');
+                    if (status) status.innerText = 'Waktu Soal Habis (Bel 3x)';
+                    if (btn) btn.innerHTML = '<i class="fa-solid fa-play"></i> <span>Mulai Ulang</span>';
+                }
+            }, 1000);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timeLeft = 40;
+            updateTimerUI();
+            const btn = document.getElementById('btn-timer-toggle');
+            if (btn) btn.innerHTML = '<i class="fa-solid fa-play"></i> <span>Mulai Countdown</span>';
+            const status = document.getElementById('timer-status');
+            if (status) status.innerText = 'Siap Dimulai';
+        }
+
+        function ringBell(count) {
+            alert(`🔔 Bunyi Bel ${count}x berbunyi: ${count === 1 ? 'Peringatan Salah Sekali' : count === 2 ? 'Bimbingan Awal Ayat' : 'Pindah ke Soal Berikutnya'}`);
+        }
+
+        function salinTemplate() {
+            const text = document.getElementById('wa-preview').innerText;
+            navigator.clipboard.writeText(text);
+            alert('Format rapor ujian disalin ke clipboard!');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('generator');
+        });
+    </script>
+
+</body>
+
+</html>

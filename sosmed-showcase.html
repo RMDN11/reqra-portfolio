@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Kelola Sosial Media • Manajemen Konten Strategis & Pertumbuhan Brand</title>
+    <meta name="description"
+        content="Showcase layanan Kelola Sosial Media Reqra: Perencanaan konten bulanan, desain visual carousel, reels high-retention, dan optimasi interaksi audiens.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reqra.my.id/sosmed-showcase.html">
+    <meta property="og:title" content="Kelola Sosial Media • Showcase Manajemen Brand & Konten Reqra">
+    <meta property="og:description" content="Tata kelola sosial media menyeluruh: Riset content pillar, desain feed carousel berkelas, video reels dinamis, jadwal posting konsisten, dan analitik performa.">
+    <meta name="theme-color" content="#090a0f">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card-surface {
+            background-color: #12151e;
+            border: 1px solid #1f2533;
+            transition: border-color 0.2s ease;
+        }
+        .card-surface:hover {
+            border-color: #333d52;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.72rem;
+            font-family: 'JetBrains Mono', monospace;
+            background: #181d28;
+            color: #94a3b8;
+            border: 1px solid #242c3d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500/20 selection:text-emerald-300">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#090a0f]/95 backdrop-blur-md border-b border-[#1c2230]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reqra Logo" class="w-8 h-8 rounded-lg object-contain bg-[#12151e] border border-emerald-500/30 group-hover:border-emerald-400 transition-colors">
+                <div class="flex items-center gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-lg">REQRA</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-[#181d28] text-slate-400 border border-[#242c3d] font-mono">PORTFOLIO</span>
+                </div>
+            </a>
+
+            <!-- Showcase Quick Switcher (Desktop) -->
+            <div class="hidden lg:flex items-center gap-1.5 text-xs font-mono">
+                <a href="hafzone-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Hafzone</a>
+                <a href="tahfidz-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">SIM Tahfidz</a>
+                <a href="jwdpolo-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">JWD Polo CRM</a>
+                <a href="restock-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Re-Stock</a>
+                <a href="motion-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Motion</a>
+                <a href="sosmed-showcase.html" class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition">Sosmed</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Kembali</span>
+                </a>
+                <a href="https://wa.me/6285890160276?text=Halo%20Reqra,%20saya%20tertarik%20dengan%20layanan%20Kelola%20Sosial%20Media."
+                    target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Diskusi Kelola Sosmed</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono mb-4">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    <span>Growth & Content Studio • Social Media Management</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                    Kelola Sosial Media
+                </h1>
+                <p class="text-base sm:text-xl text-emerald-400 font-mono mb-4">Manajemen Konten Strategis, Pertumbuhan Audiens & Visual Craft</p>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                    Solusi terpadu pengelolaan akun Instagram, TikTok, dan media sosial bisnis/lembaga Anda. Kami mengambil alih beban harian mulai dari riset content pillar, perancangan desain carousel berbobot, pembuatan video reels memikat, penulisan copywriting persuasif, hingga analisis performa bulanan secara transparan.
+                </p>
+
+                <!-- Tech Pills -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-pill"><i class="fa-solid fa-calendar-days text-emerald-400"></i> Editorial Calendar</span>
+                    <span class="tech-pill"><i class="fa-solid fa-images text-sky-400"></i> Carousel Multi-Slide</span>
+                    <span class="tech-pill"><i class="fa-solid fa-video text-purple-400"></i> High-Retention Reels</span>
+                    <span class="tech-pill"><i class="fa-solid fa-pen-nib text-amber-400"></i> Persuasive Copywriting</span>
+                    <span class="tech-pill"><i class="fa-solid fa-chart-pie text-emerald-400"></i> Growth & KPI Tracking</span>
+                </div>
+            </div>
+
+            <!-- System Overview Graphic Banner -->
+            <div class="card-surface rounded-2xl overflow-hidden border border-slate-800 mb-12 shadow-2xl">
+                <div class="p-4 sm:p-5 border-b border-slate-800/80 flex items-center justify-between bg-[#0e121a]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-300 font-semibold uppercase tracking-wider">Alur Kerja & Kerangka Kelola Sosial Media</span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">End-to-End Management</span>
+                </div>
+                <div class="relative bg-[#090b10] flex items-center justify-center">
+                    <img src="assets/images/sosmed-overview.png" alt="Gambaran Sistem Kelola Sosial Media Reqra" class="w-full h-auto max-h-[520px] object-cover">
+                </div>
+                <div class="p-4 bg-[#0d1017] border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span><strong class="text-slate-200">Gambaran Alur:</strong> Riset Audiens & Pilar &rarr; Desain Feed & Reels &rarr; Copywriting & Review &rarr; Penjadwalan & Analitik Bulanan</span>
+                    <span class="text-emerald-400 font-mono text-[11px]">Organic & Paid Growth</span>
+                </div>
+            </div>
+
+            <!-- Interactive Live Simulator Box -->
+            <div class="card-surface rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 mb-12">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-3">
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">Simulasi Interaktif</span>
+                        <h2 class="text-lg font-bold text-white">Framework Eksekusi Konten Bulanan</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <button onclick="switchTab('pilar')" id="tab-btn-pilar" class="px-3 py-1 rounded-lg text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition">1. 4 Pilar Konten Utama</button>
+                        <button onclick="switchTab('carousel')" id="tab-btn-carousel" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">2. Struktur Carousel Hook</button>
+                        <button onclick="switchTab('kpi')" id="tab-btn-kpi" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">3. Metrik & KPI Bulanan</button>
+                    </div>
+                </div>
+
+                <!-- Stats summary bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Posting Bulanan</div>
+                        <div class="text-xl font-black text-white mt-0.5">20-24 <span class="text-xs font-normal text-emerald-400">Konten Terjadwal</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Format Visual</div>
+                        <div class="text-xl font-black text-white mt-0.5">Carousel + Reels <span class="text-xs font-normal text-sky-400">Kombinasi</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Pilar Edukasi</div>
+                        <div class="text-xl font-black text-white mt-0.5">High-Value <span class="text-xs font-normal text-amber-400">Bebas Clickbait</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Laporan Analitik</div>
+                        <div class="text-xl font-black text-emerald-400 mt-0.5">Bulanan <span class="text-xs font-normal text-slate-400">Transparan</span></div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Container -->
+                <div id="sim-content" class="bg-[#0b0e14] rounded-xl p-4 sm:p-5 border border-slate-800/80 min-h-[220px]">
+                    <!-- Rendered by JS below -->
+                </div>
+            </div>
+
+            <!-- Deep Dive Feature Modules -->
+            <div class="mb-14">
+                <div class="mb-8">
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Cakupan Layanan</span>
+                    <h3 class="text-2xl font-extrabold text-white">Apa Saja yang Reqra Kelola?</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Modul 1 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-compass text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">1. Riset Audiens & Content Pillar</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Kami memetakan target pembaca Anda, menganalisis keresahan utama mereka, dan menyusun formula pilar konten yang relevan agar brand Anda tampil otoritatif di industrinya.
+                        </p>
+                    </div>
+
+                    <!-- Modul 2 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-palette text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">2. Desain Feed & Carousel Berbobot</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Desain visual eksklusif dengan tipografi proporsional, layout bersih, dan hierarki informasi rapi. Menghindari template umum Canva yang pasaran dan membosankan.
+                        </p>
+                    </div>
+
+                    <!-- Modul 3 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-video text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">3. Video Reels Dinamis & Motion</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Produksi video pendek dengan hook pembuka kuat, kinetic caption dinamis, dan musik berlisensi aman untuk memperluas jangkauan ke audiens baru (organik non-follower).
+                        </p>
+                    </div>
+
+                    <!-- Modul 4 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-feather-pointed text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Copywriting Mengalir & Persuasif</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Caption ditulis dengan bahasa Indonesia yang enak dibaca, lugas, dan bebas gaya bahasa kaku AI. Dilengkapi ajakan bertindak (CTA) jelas ke profil atau WhatsApp.
+                        </p>
+                    </div>
+
+                    <!-- Modul 5 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-clock text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">5. Penjadwalan & Distribusi Konsisten</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Posting terencana di jam-jam prime time interaksi tertinggi audiens Anda. Menjaga akun tetap aktif secara stabil tanpa membuat tim internal Anda terbebani.
+                        </p>
+                    </div>
+
+                    <!-- Modul 6 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-chart-simple text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">6. Evaluasi Metrik & Rekomendasi</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Laporan transparan setiap bulan: metrik reach, profile visits, clicks ke link bio/WA, serta evaluasi konten mana yang paling menghasilkan prospek pelanggan nyata.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action & Live Integration Section -->
+            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-10 text-center">
+                <h3 class="text-2xl font-extrabold text-white mb-3">
+                    Ingin Akun Sosial Media Anda Dikelola Secara Profesional?
+                </h3>
+                <p class="text-sm text-slate-400 max-w-xl mx-auto mb-6">
+                    Fokuslah pada operasional dan pengembangan produk utama Anda, biar kami yang merawat kehadiran digital dan pertumbuhan audiens brand Anda setiap hari.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Reqra.%20Saya%20ingin%20konsultasi%20layanan%20Kelola%20Sosial%20Media%20untuk%20brand/akun%20kami."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-6 py-3 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/10 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Konsultasi Kelola Sosmed via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1c2230] bg-[#07080c] py-6 text-center text-xs text-slate-500 font-mono">
+        Reqra Studio &bull; Kelola Sosial Media Showcase &bull; 2026
+    </footer>
+
+    <!-- Interactive Simulator Script -->
+    <script>
+        const tabContent = {
+            pilar: `
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                    <div class="p-3.5 rounded-xl bg-[#0e121a] border border-slate-800">
+                        <div class="font-bold text-white mb-1 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                            <span>Pilar 1: Edukasi & Pemecahan Masalah (40%)</span>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed font-sans">
+                            Memberikan wawasan teknis praktis, tips operasional, dan jawaban atas masalah nyata yang dialami audiens. Menjadikan akun sumber referensi utama.
+                        </p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-[#0e121a] border border-slate-800">
+                        <div class="font-bold text-white mb-1 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                            <span>Pilar 2: Storytelling & Di Balik Layar (25%)</span>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed font-sans">
+                            Cerita proses kerja tim, tantangan nyata yang diselesaikan, dan filosofi produk. Membangun kedekatan emosional dan transparansi dengan pelanggan.
+                        </p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-[#0e121a] border border-slate-800">
+                        <div class="font-bold text-white mb-1 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                            <span>Pilar 3: Bukti Nyata & Studi Kasus (20%)</span>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed font-sans">
+                            Testimoni asli, dokumentasi implementasi sistem di lapangan, dan angka pencapaian nyata klien sebagai bukti keandalan layanan Anda.
+                        </p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-[#0e121a] border border-slate-800">
+                        <div class="font-bold text-white mb-1 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                            <span>Pilar 4: Penawaran Solutif / Promo (15%)</span>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed font-sans">
+                            Ajakan konsultasi langsung via WhatsApp, peluncuran fitur baru, atau penawaran kuota terbatas dengan alasan urgensi yang logis.
+                        </p>
+                    </div>
+                </div>
+            `,
+            carousel: `
+                <div class="space-y-3 font-mono text-xs">
+                    <div class="p-3 rounded-lg bg-[#0e121a] border border-slate-800">
+                        <div class="text-emerald-400 font-bold mb-1">Slide 1: The Arresting Hook</div>
+                        <p class="text-slate-300 font-sans">Judul yang menantang asumsi umum atau memvalidasi keresahan terbesar pembaca dalam 5-7 kata yang kontras dan bersih.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#0e121a] border border-slate-800">
+                        <div class="text-sky-400 font-bold mb-1">Slide 2-4: Deep Dive Problem & Breakdown</div>
+                        <p class="text-slate-300 font-sans">Membongkar kenapa masalah tersebut sering terjadi, dilengkapi diagram ringkas atau ilustrasi perbandingan sebelum vs sesudah.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#0e121a] border border-slate-800">
+                        <div class="text-amber-400 font-bold mb-1">Slide 5-6: Step-by-Step Actionable Solution</div>
+                        <p class="text-slate-300 font-sans">Solusi konkret yang bisa langsung dicoba oleh pembaca hari ini tanpa berbelit-belit.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-[#0e121a] border border-slate-800">
+                        <div class="text-purple-400 font-bold mb-1">Slide 7: Clear & Honest Call to Action</div>
+                        <p class="text-slate-300 font-sans">"Simpan postingan ini jika bermanfaat, atau hubungi link di bio untuk konsultasi implementasi langsung di bisnis Anda."</p>
+                    </div>
+                </div>
+            `,
+            kpi: `
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="text-[11px] font-mono uppercase bg-slate-900/60 text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th class="py-2.5 px-3">Metrik Utama</th>
+                            <th class="py-2.5 px-3">Fungsi & Makna Bisnis</th>
+                            <th class="py-2.5 px-3 text-center">Target Standar Reqra</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50">
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Non-Follower Reach</td>
+                            <td class="py-2.5 px-3">Seberapa banyak calon pelanggan baru yang melihat akun Anda</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-emerald-400 font-bold">> 45% dari Total Reach</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Save & Share Rate</td>
+                            <td class="py-2.5 px-3">Bukti bahwa konten dinilai bernilai tinggi dan layak disimpan</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-emerald-400 font-bold">> 4.5% per Postingan</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Bio Link / WA Clicks</td>
+                            <td class="py-2.5 px-3">Jumlah audiens yang bergerak dari media sosial ke tahap konsultasi</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-emerald-400 font-bold">Bertumbuh Konsisten Tiap Minggu</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `
+        };
+
+        function switchTab(tab) {
+            ['pilar', 'carousel', 'kpi'].forEach(t => {
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (btn) {
+                    if (t === tab) {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition';
+                    } else {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition';
+                    }
+                }
+            });
+
+            const contentEl = document.getElementById('sim-content');
+            if (contentEl && tabContent[tab]) {
+                contentEl.innerHTML = tabContent[tab];
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('pilar');
+        });
+    </script>
+
+</body>
+
+</html>

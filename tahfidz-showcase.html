@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>SIM Tahfidz • Sistem Informasi Manajemen Pesantren & Halaqah</title>
+    <meta name="description"
+        content="Showcase platform SIM Tahfidz: Tata kelola santri, distribusi halaqah, mutaba'ah liqo harian, administrasi syahriah, dan rapor evaluasi terpadu.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reqra.my.id/tahfidz-showcase.html">
+    <meta property="og:title" content="SIM Tahfidz • Showcase Sistem Informasi Pesantren">
+    <meta property="og:description" content="Manajemen santri terpadu: Distribusi halaqah, mutaba'ah setoran liqo, keuangan syahriah, dan integrasi ujian Hafzone.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card-surface {
+            background-color: #12151e;
+            border: 1px solid #1f2533;
+            transition: border-color 0.2s ease;
+        }
+        .card-surface:hover {
+            border-color: #333d52;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.72rem;
+            font-family: 'JetBrains Mono', monospace;
+            background: #181d28;
+            color: #94a3b8;
+            border: 1px solid #242c3d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500/20 selection:text-emerald-300">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#090a0f]/95 backdrop-blur-md border-b border-[#1c2230]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reqra Logo" class="w-8 h-8 rounded-lg object-contain bg-[#12151e] border border-emerald-500/30 group-hover:border-emerald-400 transition-colors">
+                <div class="flex items-center gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-lg">REQRA</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-[#181d28] text-slate-400 border border-[#242c3d] font-mono">PORTFOLIO</span>
+                </div>
+            </a>
+
+            <!-- Showcase Quick Switcher (Desktop) -->
+            <div class="hidden lg:flex items-center gap-1.5 text-xs font-mono">
+                <a href="hafzone-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Hafzone</a>
+                <a href="tahfidz-showcase.html" class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition">SIM Tahfidz</a>
+                <a href="jwdpolo-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">JWD Polo CRM</a>
+                <a href="restock-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Re-Stock</a>
+                <a href="motion-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Motion</a>
+                <a href="sosmed-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Sosmed</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Kembali</span>
+                </a>
+                <a href="https://wa.me/6285890160276?text=Halo%20Reqra,%20saya%20tertarik%20dengan%20sistem%20SIM%20Tahfidz%20Pesantren."
+                    target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Diskusi SIM Tahfidz</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono mb-4">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Product Showcase • Islamic EdTech Platform</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                    SIM Tahfidz Terpadu
+                </h1>
+                <p class="text-base sm:text-xl text-emerald-400 font-mono mb-4">Sistem Informasi Manajemen Halaqah & Pesantren Al-Qur'an</p>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                    Solusi tata kelola komprehensif untuk pondok pesantren, rumah tahfidz, dan halaqah mandiri. Menghubungkan manajemen santri, pembagian kelompok liqo, buku saku mutaba'ah harian, keuangan syahriah SPP, hingga integrasi langsung ke bank soal ujian Hafzone.
+                </p>
+
+                <!-- Tech Pills -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-pill"><i class="fa-brands fa-php text-sky-400"></i> PHP OOP</span>
+                    <span class="tech-pill"><i class="fa-solid fa-database text-amber-400"></i> MySQL Database</span>
+                    <span class="tech-pill"><i class="fa-solid fa-file-pdf text-rose-400"></i> DOMPDF Rapor Engine</span>
+                    <span class="tech-pill"><i class="fa-solid fa-book-quran text-emerald-400"></i> Mushaf Madinah 30 Juz</span>
+                    <span class="tech-pill"><i class="fa-solid fa-users text-blue-400"></i> Multi-Halaqah Grouping</span>
+                </div>
+            </div>
+
+            <!-- System Overview Graphic Banner -->
+            <div class="card-surface rounded-2xl overflow-hidden border border-slate-800 mb-12 shadow-2xl">
+                <div class="p-4 sm:p-5 border-b border-slate-800/80 flex items-center justify-between bg-[#0e121a]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-300 font-semibold uppercase tracking-wider">Arsitektur & Gambaran Sistem SIM Tahfidz</span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Live Enterprise Flow</span>
+                </div>
+                <div class="relative bg-[#090b10] flex items-center justify-center">
+                    <img src="assets/images/tahfidz-overview.png" alt="Gambaran Sistem SIM Tahfidz Terpadu" class="w-full h-auto max-h-[520px] object-cover">
+                </div>
+                <div class="p-4 bg-[#0d1017] border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span><strong class="text-slate-200">Gambaran Alur:</strong> Distribusi Halaqah &rarr; Mutaba'ah Harian &rarr; Syahriah &rarr; Generator Rapor PDF Otomatis</span>
+                    <span class="text-emerald-400 font-mono text-[11px]">Terintegrasi Modul Hafzone</span>
+                </div>
+            </div>
+
+            <!-- Interactive Live Dashboard Simulator Box -->
+            <div class="card-surface rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 mb-12">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-3">
+                    <div>
+                        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">Simulasi Interaktif</span>
+                        <h2 class="text-lg font-bold text-white">Dashboard Manajemen Santri & Liqo</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <button onclick="switchTab('halaqah')" id="tab-btn-halaqah" class="px-3 py-1 rounded-lg text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition">1. Distribusi Halaqah</button>
+                        <button onclick="switchTab('mutabaah')" id="tab-btn-mutabaah" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">2. Mutaba'ah Setoran</button>
+                        <button onclick="switchTab('keuangan')" id="tab-btn-keuangan" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">3. Syahriah & SPP</button>
+                    </div>
+                </div>
+
+                <!-- Stats summary bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Total Santri</div>
+                        <div class="text-xl font-black text-white mt-0.5">142 <span class="text-xs font-normal text-emerald-400">Santri</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Halaqah Aktif</div>
+                        <div class="text-xl font-black text-white mt-0.5">12 <span class="text-xs font-normal text-sky-400">Kelompok</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Asatidz Pembina</div>
+                        <div class="text-xl font-black text-white mt-0.5">8 <span class="text-xs font-normal text-amber-400">Pengampu</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Rata-rata Kelancaran</div>
+                        <div class="text-xl font-black text-emerald-400 mt-0.5">91.4% <span class="text-xs font-normal text-slate-400">Jayyid Jiddan</span></div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Container -->
+                <div id="sim-content" class="bg-[#0b0e14] rounded-xl p-4 border border-slate-800/80 overflow-x-auto min-h-[220px]">
+                    <!-- Rendered by JS below -->
+                </div>
+            </div>
+
+            <!-- Deep Dive Feature Modules -->
+            <div class="mb-14">
+                <div class="mb-8">
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Arsitektur Fungsional</span>
+                    <h3 class="text-2xl font-extrabold text-white">Modul Lengkap Tata Kelola Tahfidz</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Modul 1 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-network-wired text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">1. Distribusi Halaqah Cerdas</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pengelompokan santri berdasarkan capaian juz, usia, dan gender. Memungkinkan koordinator memplot ustadz pembina dan jadwal liqo tanpa tumpang tindih.
+                        </p>
+                    </div>
+
+                    <!-- Modul 2 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-clipboard-check text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">2. Presensi & Mutaba'ah Liqo</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Buku mutaba'ah digital di tangan ustadz. Pencatatan absensi, setoran baru (sabaq), muroja'ah lama (sabqi), serta catatan fashohah langsung tersimpan ke database.
+                        </p>
+                    </div>
+
+                    <!-- Modul 3 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-chart-pie text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">3. Tracking Target 30 Juz</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Visualisasi grafik capaian juz tiap santri. Memberikan proyeksi realistis kapan santri akan menyelesaikan target hafalan sesuai kecepatan setorannya.
+                        </p>
+                    </div>
+
+                    <!-- Modul 4 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-file-invoice-dollar text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Keuangan Syahriah & Honor</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pengelolaan tagihan SPP bulanan santri, pencatatan mutasi pembayaran, serta rekapitulasi honor mengajar asatidz berdasarkan jam pertemuan liqo.
+                        </p>
+                    </div>
+
+                    <!-- Modul 5 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-check-double text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">5. Integrasi Ujian Hafzone</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Terhubung langsung dengan mesin penguji Hafzone untuk pengujian acak rentang 1/2 juz, timer soal 40 detik, serta pencatatan nilai romawi instan.
+                        </p>
+                    </div>
+
+                    <!-- Modul 6 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-print text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">6. Rapor & Rekapitulasi PDF</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Cetak rapor berkala santri dan berita acara kelulusan hafalan juz menggunakan engine DOMPDF dengan layout formal siap dibagikan ke wali santri.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action & Live Integration Section -->
+            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-10 text-center">
+                <h3 class="text-2xl font-extrabold text-white mb-3">
+                    Ingin Menerapkan Sistem Ini di Lembaga atau Pesantren Anda?
+                </h3>
+                <p class="text-sm text-slate-400 max-w-xl mx-auto mb-6">
+                    Sistem ini dapat disesuaikan sepenuhnya dengan kurikulum, target juz, dan alur administrasi unik yang berlaku di institusi Anda.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://app.reqra.my.id/mhq" target="_blank"
+                        class="px-5 py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition">
+                        <i class="fa-solid fa-play text-xs mr-1"></i>
+                        <span>Coba Modul Ujian Hafzone (Live)</span>
+                    </a>
+                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Reqra.%20Saya%20tertarik%20konsultasi%20sistem%20SIM%20Tahfidz%20untuk%20pesantren/lembaga%20kami."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-200 font-semibold text-sm hover:bg-slate-700 border border-slate-700 transition">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i>
+                        <span>Konsultasi via WhatsApp</span>
+                    </a>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/60 text-xs text-slate-500">
+                    Akses Login Pengurus Lembaga: <a href="https://app.reqra.my.id/tahfidz/mlebu.php" target="_blank" class="text-slate-400 hover:underline">Masuk ke Portal SIM Tahfidz</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1c2230] bg-[#07080c] py-6 text-center text-xs text-slate-500 font-mono">
+        Reqra Studio &bull; SIM Tahfidz Showcase &bull; 2026
+    </footer>
+
+    <!-- Interactive script for Dashboard Simulator -->
+    <script>
+        const tabContent = {
+            halaqah: `
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="text-[11px] font-mono uppercase bg-slate-900/60 text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th class="py-2.5 px-3">Halaqah</th>
+                            <th class="py-2.5 px-3">Ustadz Pengampu</th>
+                            <th class="py-2.5 px-3">Target Tingkat</th>
+                            <th class="py-2.5 px-3 text-center">Jumlah Santri</th>
+                            <th class="py-2.5 px-3">Jadwal Liqo</th>
+                            <th class="py-2.5 px-3 text-center">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50">
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Halaqah Al-Fatih 1</td>
+                            <td class="py-2.5 px-3">Ust. Abdullah Hafidz</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px]">Juz 28 - 30</span></td>
+                            <td class="py-2.5 px-3 text-center font-bold">14 Santri</td>
+                            <td class="py-2.5 px-3 text-slate-400">Ba'da Subuh (05:30)</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-emerald-400 font-mono text-[11px] font-bold">Aktif</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Halaqah Al-Fatih 2</td>
+                            <td class="py-2.5 px-3">Ust. Muhammad Zaid</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 font-mono text-[10px]">Juz 1 - 5</span></td>
+                            <td class="py-2.5 px-3 text-center font-bold">12 Santri</td>
+                            <td class="py-2.5 px-3 text-slate-400">Ba'da Ashar (16:00)</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-emerald-400 font-mono text-[11px] font-bold">Aktif</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Halaqah Khusus Ujian</td>
+                            <td class="py-2.5 px-3">Ust. Salman Al-Farisi</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-[10px]">Tasmi' 30 Juz</span></td>
+                            <td class="py-2.5 px-3 text-center font-bold">6 Santri</td>
+                            <td class="py-2.5 px-3 text-slate-400">Ba'da Maghrib</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-emerald-400 font-mono text-[11px] font-bold">Aktif</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+            mutabaah: `
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="text-[11px] font-mono uppercase bg-slate-900/60 text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th class="py-2.5 px-3">Nama Santri</th>
+                            <th class="py-2.5 px-3">Jenis Setoran</th>
+                            <th class="py-2.5 px-3">Surat & Ayat</th>
+                            <th class="py-2.5 px-3 text-center">Kelancaran</th>
+                            <th class="py-2.5 px-3">Catatan Tajwid</th>
+                            <th class="py-2.5 px-3 text-center">Kehadiran</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50">
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Muhammad Farhan</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px]">Sabaq (Hafalan Baru)</span></td>
+                            <td class="py-2.5 px-3 font-mono">An-Naba' 1 - 25</td>
+                            <td class="py-2.5 px-3 text-center text-emerald-400 font-bold font-mono">Mumtaz</td>
+                            <td class="py-2.5 px-3 text-slate-400">Mad Jaiz Munfashil diperhatikan konsistensinya</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-emerald-400 font-bold">Hadir</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Aisyah Zahira</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 font-mono text-[10px]">Sabqi (Muroja'ah)</span></td>
+                            <td class="py-2.5 px-3 font-mono">Al-Mulk Hal. 562 - 564</td>
+                            <td class="py-2.5 px-3 text-center text-sky-400 font-bold font-mono">Jayyid Jiddan</td>
+                            <td class="py-2.5 px-3 text-slate-400">Ghunnah pada nun bertasydid sudah sangat bagus</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-emerald-400 font-bold">Hadir</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Rizky Ramadhan</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px]">Manzil (Hafalan Lama)</span></td>
+                            <td class="py-2.5 px-3 font-mono">Juz 30 (Hal 582 - 592)</td>
+                            <td class="py-2.5 px-3 text-center text-amber-400 font-bold font-mono">Jayyid</td>
+                            <td class="py-2.5 px-3 text-slate-400">Perbanyak ulang surat Al-Insyiqaq</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-emerald-400 font-bold">Hadir</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+            keuangan: `
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="text-[11px] font-mono uppercase bg-slate-900/60 text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th class="py-2.5 px-3">Nama Santri</th>
+                            <th class="py-2.5 px-3">Bulan Tagihan</th>
+                            <th class="py-2.5 px-3">Nominal Syahriah</th>
+                            <th class="py-2.5 px-3 text-center">Status</th>
+                            <th class="py-2.5 px-3">Tanggal Bayar</th>
+                            <th class="py-2.5 px-3 text-center">Kwitansi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50">
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Muhammad Farhan</td>
+                            <td class="py-2.5 px-3 font-mono">November 2026</td>
+                            <td class="py-2.5 px-3 font-mono font-bold">Rp 350.000</td>
+                            <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">Lunas</span></td>
+                            <td class="py-2.5 px-3 text-slate-400">02 Nov 2026</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-sky-400 font-mono text-[11px] hover:underline cursor-pointer">PDF #INV-1092</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Aisyah Zahira</td>
+                            <td class="py-2.5 px-3 font-mono">November 2026</td>
+                            <td class="py-2.5 px-3 font-mono font-bold">Rp 350.000</td>
+                            <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">Lunas</span></td>
+                            <td class="py-2.5 px-3 text-slate-400">04 Nov 2026</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-sky-400 font-mono text-[11px] hover:underline cursor-pointer">PDF #INV-1098</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-bold text-white">Ibrahim Al-Ghazi</td>
+                            <td class="py-2.5 px-3 font-mono">November 2026</td>
+                            <td class="py-2.5 px-3 font-mono font-bold">Rp 350.000</td>
+                            <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] font-bold">Menunggu Transfer</span></td>
+                            <td class="py-2.5 px-3 text-slate-500">-</td>
+                            <td class="py-2.5 px-3 text-center"><span class="text-slate-500 text-[11px]">Reminder WA Terjadwal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            `
+        };
+
+        function switchTab(tab) {
+            ['halaqah', 'mutabaah', 'keuangan'].forEach(t => {
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (btn) {
+                    if (t === tab) {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-bold transition';
+                    } else {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition';
+                    }
+                }
+            });
+
+            const contentEl = document.getElementById('sim-content');
+            if (contentEl && tabContent[tab]) {
+                contentEl.innerHTML = tabContent[tab];
+            }
+        }
+
+        // Init with halaqah tab
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('halaqah');
+        });
+    </script>
+
+</body>
+
+</html>

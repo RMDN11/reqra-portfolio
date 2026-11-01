@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Re-Stock • Sistem Pengawasan Mutasi Gudang & Inventori Real-Time</title>
+    <meta name="description"
+        content="Showcase platform Re-Stock: Manajemen stok gudang, scanner barcode fisik, alert titik reorder point, dan cetak surat jalan PDF otomatis.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reqra.my.id/restock-showcase.html">
+    <meta property="og:title" content="Re-Stock • Showcase Sistem Inventori Gudang">
+    <meta property="og:description" content="Aplikasi pengawasan mutasi stok gudang real-time tanpa selisih: Barcode scanner, reorder point alert, dan surat jalan DOMPDF.">
+    <meta name="theme-color" content="#090a0f">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card-surface {
+            background-color: #12151e;
+            border: 1px solid #1f2533;
+            transition: border-color 0.2s ease;
+        }
+        .card-surface:hover {
+            border-color: #333d52;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.72rem;
+            font-family: 'JetBrains Mono', monospace;
+            background: #181d28;
+            color: #94a3b8;
+            border: 1px solid #242c3d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-500/20 selection:text-amber-300">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#090a0f]/95 backdrop-blur-md border-b border-[#1c2230]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reqra Logo" class="w-8 h-8 rounded-lg object-contain bg-[#12151e] border border-amber-500/30 group-hover:border-amber-400 transition-colors">
+                <div class="flex items-center gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-lg">REQRA</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-[#181d28] text-slate-400 border border-[#242c3d] font-mono">PORTFOLIO</span>
+                </div>
+            </a>
+
+            <!-- Showcase Quick Switcher (Desktop) -->
+            <div class="hidden lg:flex items-center gap-1.5 text-xs font-mono">
+                <a href="hafzone-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Hafzone</a>
+                <a href="tahfidz-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">SIM Tahfidz</a>
+                <a href="jwdpolo-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">JWD Polo CRM</a>
+                <a href="restock-showcase.html" class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold transition">Re-Stock</a>
+                <a href="motion-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Motion</a>
+                <a href="sosmed-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Sosmed</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Kembali</span>
+                </a>
+                <a href="https://wa.me/6285890160276?text=Halo%20Reqra,%20saya%20tertarik%20dengan%20sistem%20Re-Stock%20Inventory."
+                    target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-amber-500 text-slate-950 hover:bg-amber-400 transition-colors">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Diskusi Re-Stock</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-400 text-xs font-mono mb-4">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span>Product Showcase • Live Production Web System</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                    Re-Stock Inventory
+                </h1>
+                <p class="text-base sm:text-xl text-amber-400 font-mono mb-4">Manajemen Mutasi Gudang & Pelaporan Otomatis Real-Time</p>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                    Aplikasi pengawasan stok fisik vs sistem yang mengeliminasi selisih barang di gudang. Mengintegrasikan pemindai barcode, batas aman persediaan (reorder point), pencatatan alur supplier & pelanggan, serta pembuatan Surat Jalan dan Berita Acara stok siap cetak menggunakan engine DOMPDF.
+                </p>
+
+                <!-- Tech Pills -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-pill"><i class="fa-brands fa-php text-sky-400"></i> PHP OOP</span>
+                    <span class="tech-pill"><i class="fa-solid fa-database text-amber-400"></i> MySQL Database</span>
+                    <span class="tech-pill"><i class="fa-solid fa-barcode text-emerald-400"></i> Barcode SKU Engine</span>
+                    <span class="tech-pill"><i class="fa-solid fa-triangle-exclamation text-rose-400"></i> Reorder Point Alert</span>
+                    <span class="tech-pill"><i class="fa-solid fa-file-pdf text-red-400"></i> DOMPDF Surat Jalan</span>
+                </div>
+            </div>
+
+            <!-- System Overview Graphic Banner -->
+            <div class="card-surface rounded-2xl overflow-hidden border border-slate-800 mb-12 shadow-2xl">
+                <div class="p-4 sm:p-5 border-b border-slate-800/80 flex items-center justify-between bg-[#0e121a]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-300 font-semibold uppercase tracking-wider">Arsitektur & Gambaran Sistem Re-Stock</span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Supply Chain & Logistics</span>
+                </div>
+                <div class="relative bg-[#090b10] flex items-center justify-center">
+                    <img src="assets/images/restock-overview.png" alt="Gambaran Sistem Inventori Re-Stock" class="w-full h-auto max-h-[520px] object-cover">
+                </div>
+                <div class="p-4 bg-[#0d1017] border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span><strong class="text-slate-200">Gambaran Alur:</strong> Barcode Inbound &rarr; Real-Time Ledger &rarr; Reorder Warning &rarr; Outbound Surat Jalan PDF</span>
+                    <span class="text-amber-400 font-mono text-[11px]">Zero Physical Discrepancy</span>
+                </div>
+            </div>
+
+            <!-- Interactive Live Simulator Box -->
+            <div class="card-surface rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 mb-12">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-3">
+                    <div>
+                        <span class="text-xs font-mono text-amber-400 font-semibold uppercase">Simulasi Interaktif</span>
+                        <h2 class="text-lg font-bold text-white">Live Inventory Monitor & Audit</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <button onclick="switchTab('stok')" id="tab-btn-stok" class="px-3 py-1 rounded-lg text-xs font-mono bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold transition">1. Status Stok & Barcode</button>
+                        <button onclick="switchTab('mutasi')" id="tab-btn-mutasi" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">2. Log Mutasi Barang</button>
+                        <button onclick="switchTab('suratjalan')" id="tab-btn-suratjalan" class="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition">3. Preview Surat Jalan PDF</button>
+                    </div>
+                </div>
+
+                <!-- Stats summary bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Total SKU Terdata</div>
+                        <div class="text-xl font-black text-white mt-0.5">320 <span class="text-xs font-normal text-amber-400">Item</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Mutasi Hari Ini</div>
+                        <div class="text-xl font-black text-white mt-0.5">48 <span class="text-xs font-normal text-sky-400">Transaksi</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Item Reorder Alert</div>
+                        <div class="text-xl font-black text-rose-400 mt-0.5">3 <span class="text-xs font-normal text-slate-400">Segera PO</span></div>
+                    </div>
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800/80">
+                        <div class="text-[11px] font-mono text-slate-400">Akurasi Stok Fisik</div>
+                        <div class="text-xl font-black text-emerald-400 mt-0.5">99.8% <span class="text-xs font-normal text-slate-400">Audit Sesuai</span></div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Container -->
+                <div id="sim-content" class="bg-[#0b0e14] rounded-xl p-4 sm:p-5 border border-slate-800/80 min-h-[220px]">
+                    <!-- Rendered by JS below -->
+                </div>
+            </div>
+
+            <!-- Deep Dive Feature Modules -->
+            <div class="mb-14">
+                <div class="mb-8">
+                    <span class="text-xs font-mono text-amber-400 uppercase tracking-wider font-semibold">Arsitektur Fungsional</span>
+                    <h3 class="text-2xl font-extrabold text-white">Fitur Pengendali Gudang & Logistik</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Modul 1 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-barcode text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">1. Barcode & Serial Number</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Mendukung pemindai barcode USB/Bluetooth maupun kamera HP. Setiap produk memiliki kode unik untuk mencegah kesalahan input operator gudang saat barang datang.
+                        </p>
+                    </div>
+
+                    <!-- Modul 2 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-triangle-exclamation text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">2. Reorder Point Warning</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Sistem menghitung kecepatan keluar barang (lead time) dan memberikan alert visual otomatis saat stok mendekati batas minimum sebelum terjadi kehabisan stok.
+                        </p>
+                    </div>
+
+                    <!-- Modul 3 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-arrow-right-arrow-left text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">3. Buku Kas Mutasi Stok</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pencatatan ganda setiap kali barang berpindah (Inbound dari Supplier, Outbound ke Customer, Retur Rusak, atau Penyesuaian Stock Opname berkala).
+                        </p>
+                    </div>
+
+                    <!-- Modul 4 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-file-invoice text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Cetak Surat Jalan DOMPDF</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pembuatan dokumen Surat Jalan resmi berlogo perusahaan, rincian barang, QR verifikasi, dan tanda tangan penerima yang langsung siap dicetak dalam format PDF.
+                        </p>
+                    </div>
+
+                    <!-- Modul 5 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-users text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">5. Multi-User & Hak Akses</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Pemisahan peran antara Admin Pengadaan, Petugas Gudang (Checker), dan Manajer Operasional untuk menjaga akuntabilitas stok tanpa manipulasi data.
+                        </p>
+                    </div>
+
+                    <!-- Modul 6 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-chart-line text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">6. Valuasi Nilai Aset Stok</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Kalkulasi otomatis total nilai nominal barang yang tersimpan di gudang dengan metode FIFO/Average untuk keperluan audit pembukuan keuangan bulanan.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action & Live Integration Section -->
+            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-10 text-center">
+                <h3 class="text-2xl font-extrabold text-white mb-3">
+                    Ingin Memasang Sistem Re-Stock di Gudang Anda?
+                </h3>
+                <p class="text-sm text-slate-400 max-w-xl mx-auto mb-6">
+                    Sistem dapat disesuaikan dengan alur supplier, kategori produk, dan format dokumen surat jalan operasional bisnis Anda.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://restock.reqra.my.id" target="_blank" rel="noopener noreferrer"
+                        class="px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm hover:bg-amber-400 transition shadow-lg shadow-amber-500/10 flex items-center gap-2">
+                        <i class="fa-solid fa-play text-xs"></i>
+                        <span>Buka Re-Stock Web App (Live)</span>
+                    </a>
+                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Reqra.%20Saya%20tertarik%20konsultasi%20sistem%20manajemen%20gudang%20Re-Stock."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-5 py-2.5 rounded-xl bg-slate-800 text-slate-200 font-semibold text-sm hover:bg-slate-700 border border-slate-700 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        <span>Konsultasi via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1c2230] bg-[#07080c] py-6 text-center text-xs text-slate-500 font-mono">
+        Reqra Studio &bull; Re-Stock Showcase &bull; 2026
+    </footer>
+
+    <!-- Interactive Simulator Script -->
+    <script>
+        const tabContent = {
+            stok: `
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="text-[11px] font-mono uppercase bg-slate-900/60 text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th class="py-2.5 px-3">SKU / Barcode</th>
+                            <th class="py-2.5 px-3">Nama Produk</th>
+                            <th class="py-2.5 px-3 text-center">Stok Fisik</th>
+                            <th class="py-2.5 px-3 text-center">Batas Minimum</th>
+                            <th class="py-2.5 px-3 text-center">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50">
+                        <tr>
+                            <td class="py-2.5 px-3 font-mono text-amber-300">8992753201</td>
+                            <td class="py-2.5 px-3 font-bold text-white">Kemeja Oxford Formal Putih (Size L)</td>
+                            <td class="py-2.5 px-3 text-center font-mono font-bold text-white">124 Pcs</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-slate-400">20 Pcs</td>
+                            <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">Aman</span></td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-mono text-amber-300">8992753202</td>
+                            <td class="py-2.5 px-3 font-bold text-white">Polo Shirt Pique Navy (Size XL)</td>
+                            <td class="py-2.5 px-3 text-center font-mono font-bold text-white">88 Pcs</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-slate-400">15 Pcs</td>
+                            <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">Aman</span></td>
+                        </tr>
+                        <tr class="bg-rose-950/20">
+                            <td class="py-2.5 px-3 font-mono text-rose-300">8992753218</td>
+                            <td class="py-2.5 px-3 font-bold text-rose-200">Jaket Windbreaker Hitam (Size M)</td>
+                            <td class="py-2.5 px-3 text-center font-mono font-bold text-rose-400">4 Pcs</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-slate-400">15 Pcs</td>
+                            <td class="py-2.5 px-3 text-center"><span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 font-mono text-[10px] font-bold">Reorder Alert</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+            mutasi: `
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="text-[11px] font-mono uppercase bg-slate-900/60 text-slate-400 border-b border-slate-800">
+                        <tr>
+                            <th class="py-2.5 px-3">Waktu Transaksi</th>
+                            <th class="py-2.5 px-3">Tipe Mutasi</th>
+                            <th class="py-2.5 px-3">Nama Barang</th>
+                            <th class="py-2.5 px-3 text-center">Jumlah</th>
+                            <th class="py-2.5 px-3">Operator Gudang</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/50">
+                        <tr>
+                            <td class="py-2.5 px-3 font-mono text-slate-400">01 Nov 14:22</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">Barang Masuk (In)</span></td>
+                            <td class="py-2.5 px-3 font-bold text-white">Kemeja Oxford Formal Putih</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-emerald-400 font-bold">+50 Pcs</td>
+                            <td class="py-2.5 px-3">Agus Permana (Gudang A)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2.5 px-3 font-mono text-slate-400">01 Nov 15:05</td>
+                            <td class="py-2.5 px-3"><span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 font-mono text-[10px] font-bold">Barang Keluar (Out)</span></td>
+                            <td class="py-2.5 px-3 font-bold text-white">Polo Shirt Pique Navy</td>
+                            <td class="py-2.5 px-3 text-center font-mono text-sky-400 font-bold">-12 Pcs</td>
+                            <td class="py-2.5 px-3">Samsul Bahri (Gudang B)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            `,
+            suratjalan: `
+                <div class="p-4 rounded-xl bg-[#07090e] border border-slate-800 font-mono text-xs text-slate-300 space-y-3">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                        <div>
+                            <div class="font-bold text-white text-sm">SURAT JALAN PENGIRIMAN GUDANG</div>
+                            <div class="text-[11px] text-slate-400">Nomor Dokumen: #SJ-2026/XI/0042</div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px]">Siap Cetak DOMPDF</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 text-[11px]">
+                        <div>
+                            <span class="text-slate-500">Penerima / Tujuan:</span><br>
+                            <strong class="text-slate-200">PT. Mitra Busana Nusantara</strong><br>
+                            Jl. Raya Industri Blok B4, Jakarta
+                        </div>
+                        <div>
+                            <span class="text-slate-500">Tanggal Pengiriman:</span><br>
+                            <strong class="text-slate-200">01 November 2026</strong><br>
+                            Kurir: Armada Internal Reqra Logistik
+                        </div>
+                    </div>
+                    <div class="pt-2 text-slate-400 text-[11px]">
+                        Isi Muatan: 50 Pcs Kemeja Oxford Formal Putih &bull; 12 Pcs Polo Shirt Pique Navy &bull; Total Box: 4 Karton Segel
+                    </div>
+                </div>
+            `
+        };
+
+        function switchTab(tab) {
+            ['stok', 'mutasi', 'suratjalan'].forEach(t => {
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (btn) {
+                    if (t === tab) {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold transition';
+                    } else {
+                        btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 text-slate-400 hover:text-white transition';
+                    }
+                }
+            });
+
+            const contentEl = document.getElementById('sim-content');
+            if (contentEl && tabContent[tab]) {
+                contentEl.innerHTML = tabContent[tab];
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTab('stok');
+        });
+    </script>
+
+</body>
+
+</html>
