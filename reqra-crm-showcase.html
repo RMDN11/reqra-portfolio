@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Reqra CRM • Flagship Multi-Agent WhatsApp CRM & Sales Automation</title>
+    <meta name="description"
+        content="Showcase Reqra CRM: Platform omnichannel WhatsApp multi-agen, otomasi follow-up leads berkala, dan mesin broadcast massal anti-ban.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reqra.my.id/reqra-crm-showcase.html">
+    <meta property="og:title" content="Reqra CRM • Showcase WhatsApp CRM Multi-Agent">
+    <meta property="og:description" content="Sistem otomasi WhatsApp bisnis: Multi-agent inbox, cron follow-up 1 menit, spintax anti-banned, dan pelacakan konversi.">
+    <meta name="theme-color" content="#090a0f">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card-surface {
+            background-color: #12151e;
+            border: 1px solid #1f2533;
+            transition: border-color 0.25s ease, transform 0.25s ease;
+        }
+        .card-surface:hover {
+            border-color: #38455c;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.72rem;
+            font-family: 'JetBrains Mono', monospace;
+            background: #181d28;
+            color: #94a3b8;
+            border: 1px solid #242c3d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-sky-500/20 selection:text-sky-300">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#090a0f]/95 backdrop-blur-md border-b border-[#1c2230]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Reqra Logo" class="w-8 h-8 rounded-lg object-contain bg-[#12151e] border border-sky-500/30 group-hover:border-sky-400 transition-colors">
+                <div class="flex items-center gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-lg">REQRA</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/40 font-mono font-bold">FLAGSHIP</span>
+                </div>
+            </a>
+
+            <!-- Showcase Quick Switcher (Desktop) -->
+            <div class="hidden lg:flex items-center gap-1.5 text-xs font-mono">
+                <a href="reqra-crm-showcase.html" class="px-2.5 py-1 rounded bg-sky-500/20 text-sky-300 border border-sky-500/40 font-bold transition">Reqra CRM</a>
+                <a href="hafzone-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Hafzone</a>
+                <a href="tahfidz-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">SIM Tahfidz</a>
+                <a href="restock-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Re-Stock</a>
+                <a href="motion-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Motion</a>
+                <a href="sosmed-showcase.html" class="px-2.5 py-1 rounded bg-[#12151e] text-slate-400 hover:text-white border border-[#1f2533] transition">Sosmed</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="text-xs sm:text-sm font-semibold text-slate-300 hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left text-xs"></i>
+                    <span>Beranda</span>
+                </a>
+                <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20implementasi%20Reqra%20CRM%20WhatsApp%20untuk%20bisnis%20kami."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 text-slate-950 hover:bg-sky-400 transition-colors shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Konsultasi CRM via WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-12">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/25 text-sky-400 text-xs font-mono mb-4">
+                    <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                    <span>Flagship Product • Live Enterprise WhatsApp Suite</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+                    Reqra CRM
+                </h1>
+                <p class="text-base sm:text-xl text-sky-400 font-mono mb-4">Multi-Agent WhatsApp CRM & Sales Automation Suite</p>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                    Solusi komunikasi bisnis terpadu yang menghubungkan satu nomor WhatsApp resmi perusahaan ke puluhan staf customer service dan sales secara bersamaan. Dilengkapi auto-responder cerdas, antrean follow-up otomatis berbasis cron worker 1 menit, dan broadcast massal dengan proteksi anti-ban.
+                </p>
+
+                <!-- Tech Pills -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="tech-pill"><i class="fa-brands fa-php text-sky-400"></i> PHP 8.2 OOP</span>
+                    <span class="tech-pill"><i class="fa-solid fa-database text-amber-400"></i> MySQL Database</span>
+                    <span class="tech-pill"><i class="fa-brands fa-node-js text-emerald-400"></i> Baileys WebSocket</span>
+                    <span class="tech-pill"><i class="fa-solid fa-clock text-purple-400"></i> Cron Worker 1m</span>
+                    <span class="tech-pill"><i class="fa-solid fa-shield-halved text-rose-400"></i> Spintax Anti-Ban</span>
+                    <span class="tech-pill"><i class="fa-solid fa-users text-blue-400"></i> Multi-Agent Routing</span>
+                </div>
+            </div>
+
+            <!-- System Overview Graphic Banner -->
+            <div class="card-surface rounded-2xl overflow-hidden border border-slate-800 mb-12 shadow-2xl">
+                <div class="p-4 sm:p-5 border-b border-slate-800/80 flex items-center justify-between bg-[#0e121a]">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-sky-500/80 inline-block"></span>
+                        <span class="text-xs font-mono text-slate-300 font-semibold uppercase tracking-wider">Arsitektur & Gambaran Sistem Reqra CRM</span>
+                    </div>
+                    <span class="text-xs font-mono text-sky-400 font-bold">Produksi Aktif</span>
+                </div>
+                <div class="relative bg-[#090b10] flex items-center justify-center">
+                    <img src="assets/images/jwdpolo-overview.png" alt="Gambaran Sistem WhatsApp CRM Reqra" class="w-full h-auto max-h-[520px] object-cover">
+                </div>
+                <div class="p-4 bg-[#0d1017] border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span><strong class="text-slate-200">Alur Kerja:</strong> Gateway WhatsApp &rarr; Multi-Agent Dispatcher &rarr; Follow-Up Otomatis &rarr; Broadcast Aman Anti-Ban</span>
+                    <span class="text-sky-400 font-mono text-[11px]">SLA Response Real-Time</span>
+                </div>
+            </div>
+
+            <!-- Interactive Live Simulator Box -->
+            <div class="card-surface rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 mb-12">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-3">
+                    <div>
+                        <span class="text-xs font-mono text-sky-400 font-semibold uppercase">Simulasi Interaktif</span>
+                        <h2 class="text-lg font-bold text-white">Multi-Agent Customer Inbox</h2>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-lg border border-slate-800">
+                            1 Nomor WhatsApp &bull; Multi-Agen Online
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Simulation Content Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                    <!-- Chat list -->
+                    <div class="bg-[#0b0e14] p-3 rounded-xl border border-slate-800 space-y-2">
+                        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-2">Antrean Chat Masuk</div>
+                        
+                        <div onclick="selectChat(1)" id="chat-thread-1" class="p-2.5 rounded-lg bg-sky-950/40 border border-sky-800/60 cursor-pointer transition hover:bg-sky-900/30">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-white">Ahmad Fauzi</span>
+                                <span class="text-[10px] text-sky-400 font-mono">10:42</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 truncate mt-1">Tanya pendaftaran kelas intensif...</p>
+                            <span class="inline-block mt-1.5 text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">Prospek Baru</span>
+                        </div>
+
+                        <div onclick="selectChat(2)" id="chat-thread-2" class="p-2.5 rounded-lg bg-[#10141d] border border-slate-800 cursor-pointer transition hover:bg-slate-800/50">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-white">Ibu Siti Rahma</span>
+                                <span class="text-[10px] text-slate-500 font-mono">09:15</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 truncate mt-1">Konfirmasi bukti transfer SPP...</p>
+                            <span class="inline-block mt-1.5 text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono">Verifikasi</span>
+                        </div>
+
+                        <div onclick="selectChat(3)" id="chat-thread-3" class="p-2.5 rounded-lg bg-[#10141d] border border-slate-800 cursor-pointer transition hover:bg-slate-800/50">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-white">Pak Budi Santoso</span>
+                                <span class="text-[10px] text-slate-500 font-mono">Kemarin</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 truncate mt-1">Terima kasih bantuannya...</p>
+                            <span class="inline-block mt-1.5 text-[9px] px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300 font-mono">Pelanggan Aktif</span>
+                        </div>
+                    </div>
+
+                    <!-- Chat active viewport -->
+                    <div class="md:col-span-2 bg-[#0b0e14] rounded-xl border border-slate-800 flex flex-col justify-between p-4 min-h-[300px]">
+                        <div>
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-800/80 mb-4">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 rounded-full bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-400 font-bold text-xs">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <h4 id="chat-name" class="text-xs font-bold text-white leading-tight">Ahmad Fauzi</h4>
+                                        <span id="chat-agent-info" class="text-[10px] text-slate-400 font-mono">Ditangani oleh: CS Rina &bull; Status: Prospek Baru</span>
+                                    </div>
+                                </div>
+                                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Live Sync</span>
+                            </div>
+
+                            <div id="chat-feed" class="space-y-3">
+                                <div class="self-start max-w-[85%] bg-slate-800 text-slate-200 rounded-2xl rounded-tl-none p-3 text-xs leading-relaxed border border-slate-700">
+                                    <div>Assalamu'alaikum kak, saya mau tanya pendaftaran kelas tahfidz intensif untuk bulan depan apakah masih dibuka kuotanya?</div>
+                                    <div class="text-[10px] text-slate-400 text-right mt-1 font-mono">10:41</div>
+                                </div>
+
+                                <div class="self-center px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[10px] text-slate-400 font-mono text-center">
+                                    <i class="fa-solid fa-robot text-sky-400 mr-1"></i> Auto-Responder: Mengirim format syarat pendaftaran & brosur program
+                                </div>
+
+                                <div class="self-end max-w-[85%] ml-auto bg-sky-900/60 text-sky-100 rounded-2xl rounded-tr-none p-3 text-xs leading-relaxed border border-sky-700/60">
+                                    <div>Wa'alaikumussalam warahmatullah, halo Mas Ahmad! Masih dibuka ya untuk batch intensif bulan depan. Untuk program 1-on-1 bersama ustadz hafidz 30 juz tersisa 4 slot. Boleh kami bantu jelaskan pilihan jadwalnya?</div>
+                                    <div class="text-[10px] text-sky-300 text-right mt-1 font-mono">10:42 &bull; CS Rina</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-slate-800/80 mt-4 flex items-center gap-2">
+                            <input type="text" placeholder="Balas sebagai CS..." disabled
+                                class="bg-[#121622] border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-400 flex-1 cursor-not-allowed">
+                            <button disabled class="px-3 py-2 bg-sky-500/40 text-slate-400 rounded-lg text-xs font-bold cursor-not-allowed">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Dive Feature Modules -->
+            <div class="mb-14">
+                <div class="mb-8">
+                    <span class="text-xs font-mono text-sky-400 uppercase tracking-wider font-semibold">Fitur Unggulan</span>
+                    <h3 class="text-2xl font-extrabold text-white">Kapabilitas Rekayasa Reqra CRM</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Modul 1 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-inbox text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">1. Inbox Multi-Agent Terpadu</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Puluhan agen CS menjawab pelanggan dari satu nomor resmi tanpa saling tumpang tindih. Riwayat chat tercatat transparan lengkap dengan nama staf yang merespons.
+                        </p>
+                    </div>
+
+                    <!-- Modul 2 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-clock-rotate-left text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">2. Cron Follow-Up 1 Menit</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Worker otomatis berjalan di latar belakang setiap 60 detik untuk memproses pengingat pembayaran, tindak lanjut calon pendaftar, dan notifikasi jadwal kegiatan.
+                        </p>
+                    </div>
+
+                    <!-- Modul 3 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-shield-halved text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">3. Spintax & Jeda Anti-Ban</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Sistem secara dinamis memvariasikan kata pembuka, jeda pengiriman (random throttle delay), dan rotasi pesan untuk meminimalisir risiko terblokir algoritma Meta.
+                        </p>
+                    </div>
+
+                    <!-- Modul 4 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-bullhorn text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Broadcast Massal Terjadwal</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Kirim pengumuman penting atau materi edukasi ke ratusan grup WhatsApp atau kontak tersimpan secara bertahap tanpa membuat server kewalahan.
+                        </p>
+                    </div>
+
+                    <!-- Modul 5 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-robot text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">5. Auto-Responder Kata Kunci</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Merespons pertanyaan umum seperti harga, jadwal, nomor rekening, atau syarat pendaftaran secara instan 24 jam sehari saat agen sedang offline.
+                        </p>
+                    </div>
+
+                    <!-- Modul 6 -->
+                    <div class="card-surface rounded-xl p-6">
+                        <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-chart-pie text-base"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-2">6. Analitik Respons & Konversi</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Dashboard visual mengukur kecepatan respons tiap staf CS, total pesan harian, dan tingkat konversi prospek baru menjadi pelanggan setia.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action & Live Integration Section -->
+            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-10 text-center">
+                <h3 class="text-2xl font-extrabold text-white mb-3">
+                    Ingin Memasang Reqra CRM di Operasional Bisnis Anda?
+                </h3>
+                <p class="text-sm text-slate-400 max-w-xl mx-auto mb-6">
+                    Sistem dapat dikustomisasi penuh sesuai alur kerja penjualan, layanan pelanggan, dan kebutuhan database bisnis Anda.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Farhan.%20Saya%20tertarik%20konsultasi%20penerapan%20Reqra%20CRM%20WhatsApp%20untuk%20bisnis%20kami."
+                        target="_blank" rel="noopener noreferrer"
+                        class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold text-sm hover:bg-sky-400 transition shadow-lg shadow-sky-500/10 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Konsultasi Implementasi via WhatsApp</span>
+                    </a>
+                    <a href="index.html#proyek"
+                        class="px-5 py-3 rounded-xl bg-[#141822] text-slate-200 border border-[#232a3a] font-medium text-sm hover:text-white transition">
+                        Eksplorasi Showcase Lainnya
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#1c2230] bg-[#07080c] py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/images/logo.png" alt="Reqra Logo" class="w-7 h-7 rounded-lg object-contain bg-[#12151e] border border-sky-500/30">
+                <div class="flex items-center gap-2">
+                    <span class="font-extrabold tracking-tight text-white text-sm">REQRA</span>
+                    <span class="text-slate-600 text-xs">•</span>
+                    <span class="text-xs text-slate-400">Reqra CRM Showcase</span>
+                </div>
+            </a>
+
+            <!-- Active Showcase Links -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-mono text-slate-400">
+                <a href="index.html" class="hover:text-white transition">Beranda</a>
+                <span>&bull;</span>
+                <a href="reqra-crm-showcase.html" class="text-sky-400 font-bold transition">Reqra CRM</a>
+                <span>&bull;</span>
+                <a href="hafzone-showcase.html" class="hover:text-emerald-400 transition">Hafzone</a>
+                <span>&bull;</span>
+                <a href="tahfidz-showcase.html" class="hover:text-emerald-400 transition">SIM Tahfidz</a>
+                <span>&bull;</span>
+                <a href="restock-showcase.html" class="hover:text-amber-400 transition">Re-Stock</a>
+                <span>&bull;</span>
+                <a href="motion-showcase.html" class="hover:text-purple-400 transition">Motion Graphic</a>
+                <span>&bull;</span>
+                <a href="sosmed-showcase.html" class="hover:text-emerald-400 transition">Kelola Sosmed</a>
+            </div>
+
+            <!-- WhatsApp CTA in Footer -->
+            <div>
+                <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20dengan%20Reqra%20CRM."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500 hover:text-slate-950 text-xs font-semibold transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Konsultasi WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive script for Chat Demo -->
+    <script>
+        const chatData = {
+            1: {
+                name: "Ahmad Fauzi",
+                agent: "Ditangani oleh: CS Rina • Status: Prospek Baru",
+                inbound: "Assalamu'alaikum kak, saya mau tanya pendaftaran kelas tahfidz intensif untuk bulan depan apakah masih dibuka kuotanya?",
+                auto: "Auto-Responder: Mengirim format syarat pendaftaran & brosur program",
+                outbound: "Wa'alaikumussalam warahmatullah, halo Mas Ahmad! Masih dibuka ya untuk batch intensif bulan depan. Untuk program 1-on-1 bersama ustadz hafidz 30 juz tersisa 4 slot. Boleh kami bantu jelaskan pilihan jadwalnya?",
+                time: "10:42 • CS Rina"
+            },
+            2: {
+                name: "Ibu Siti Rahma",
+                agent: "Ditangani oleh: CS Farhan • Status: Menunggu Verifikasi",
+                inbound: "Assalamu'alaikum, sudah ditransfer ya kak untuk SPP bulan November atas nama santri Muhammad Rizky. Terlampir bukti mutasinya.",
+                auto: "Deteksi Kata Kunci: Bukti transfer diterima, mencocokkan nomor rekening",
+                outbound: "Alhamdulillah sudah masuk dan diverifikasi ya Ibu Siti. Terima kasih banyak, kwitansi pembayaran digital sudah kami kirimkan ke email ibu.",
+                time: "09:16 • CS Farhan"
+            },
+            3: {
+                name: "Pak Budi Santoso",
+                agent: "Ditangani oleh: CS Rina • Status: Pelanggan Aktif",
+                inbound: "Terima kasih atas bantuannya Mas, layanannya sangat memuaskan dan sistemnya memudahkan koordinasi tim kami.",
+                auto: "Tag Otomatis: Status diupdate ke Pelanggan Aktif",
+                outbound: "Sama-sama Bapak Budi, senang sekali bisa mendampingi operasional Anda. Jika butuh kustomisasi alur chat sewaktu-waktu kami siap bantu ya pak.",
+                time: "Kemarin • CS Rina"
+            }
+        };
+
+        function selectChat(id) {
+            [1, 2, 3].forEach(i => {
+                const thread = document.getElementById(`chat-thread-${i}`);
+                if (thread) {
+                    if (i === id) {
+                        thread.className = 'p-2.5 rounded-lg bg-sky-950/40 border border-sky-800/60 cursor-pointer transition hover:bg-sky-900/30';
+                    } else {
+                        thread.className = 'p-2.5 rounded-lg bg-[#10141d] border border-slate-800 cursor-pointer transition hover:bg-slate-800/50';
+                    }
+                }
+            });
+
+            const data = chatData[id];
+            if (!data) return;
+
+            document.getElementById('chat-name').textContent = data.name;
+            document.getElementById('chat-agent-info').textContent = data.agent;
+
+            document.getElementById('chat-feed').innerHTML = `
+                <div class="self-start max-w-[85%] bg-slate-800 text-slate-200 rounded-2xl rounded-tl-none p-3 text-xs leading-relaxed border border-slate-700">
+                    <div>${data.inbound}</div>
+                    <div class="text-[10px] text-slate-400 text-right mt-1 font-mono">10:41</div>
+                </div>
+                <div class="self-center px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[10px] text-slate-400 font-mono text-center">
+                    <i class="fa-solid fa-robot text-sky-400 mr-1"></i> ${data.auto}
+                </div>
+                <div class="self-end max-w-[85%] ml-auto bg-sky-900/60 text-sky-100 rounded-2xl rounded-tr-none p-3 text-xs leading-relaxed border border-sky-700/60">
+                    <div>${data.outbound}</div>
+                    <div class="text-[10px] text-sky-300 text-right mt-1 font-mono">${data.time}</div>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+
+</html>

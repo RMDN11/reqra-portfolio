@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Reqra • Farhan Ramadhan | Software Engineer, Motion & Creative Technologist</title>
+    <title>Reqra • Farhan Ramadhan | Software Engineer & Creative Technologist</title>
     <meta name="description"
-        content="Portofolio resmi Farhan Ramadhan: Software Engineer & Creative Technologist di balik Reqra. Rekayasa aplikasi web fungsional, WhatsApp CRM, motion graphic, dan kelola sosial media.">
+        content="Portofolio Farhan Ramadhan: Software Engineer & Builder di balik Reqra CRM, sistem web produksi, motion graphic, dan kelola sosial media.">
 
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://reqra.my.id/">
-    <meta property="og:title" content="Farhan Ramadhan • Software Engineer & Creative Technologist">
-    <meta property="og:description" content="Koleksi karya sistem dan media kreatif Farhan Ramadhan: Hafzone, SIM Tahfidz, JWD Polo WhatsApp CRM, Re-Stock Inventory, Motion Graphic, dan Kelola Sosial Media.">
+    <meta property="og:title" content="Reqra • Farhan Ramadhan | Software Engineer & Creative Technologist">
+    <meta property="og:description" content="Koleksi sistem produksi dan karya kreatif: Reqra CRM WhatsApp, Hafzone, SIM Tahfidz, Re-Stock, Motion Graphic, dan Kelola Sosial Media.">
     <meta name="theme-color" content="#090a0f">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -41,9 +41,7 @@
                             border: '#242a38',
                             borderHover: '#3b455c',
                             accent: '#10b981',
-                            accentLight: '#34d399',
                             sky: '#0284c7',
-                            skyLight: '#38bdf8',
                         }
                     }
                 }
@@ -59,18 +57,26 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Subtle tactile borders & surfaces */
         .card-surface {
             background-color: #12151e;
             border: 1px solid #1f2533;
-            transition: border-color 0.25s ease, transform 0.25s ease;
+            transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
         }
         .card-surface:hover {
-            border-color: #384358;
+            border-color: #3b475e;
             transform: translateY(-2px);
         }
 
-        /* Code & badge accent */
+        .flagship-surface {
+            background: linear-gradient(145deg, #101624 0%, #0d121c 100%);
+            border: 1px solid #23354f;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .flagship-surface:hover {
+            border-color: #0284c7;
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.2);
+        }
+
         .tech-pill {
             display: inline-flex;
             align-items: center;
@@ -82,6 +88,14 @@
             color: #94a3b8;
             border: 1px solid #242c3d;
             border-radius: 6px;
+        }
+
+        /* Filter tab active state */
+        .filter-btn.active {
+            background-color: #10b981;
+            color: #090a0f;
+            border-color: #10b981;
+            font-weight: 700;
         }
 
         /* Custom scrollbar */
@@ -118,19 +132,19 @@
 
             <!-- Nav Links -->
             <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-                <a href="#proyek" class="hover:text-white transition-colors">Portofolio Showcase</a>
-                <a href="#tentang" class="hover:text-emerald-400 transition-colors font-semibold">Tentang Farhan</a>
-                <a href="#kapabilitas" class="hover:text-white transition-colors">Layanan & Spesialisasi</a>
-                <a href="#prinsip" class="hover:text-white transition-colors">Prinsip Rekayasa</a>
+                <a href="#proyek" class="hover:text-white transition-colors">Showcase</a>
+                <a href="#tentang" class="hover:text-emerald-400 transition-colors">Tentang Farhan</a>
+                <a href="#kapabilitas" class="hover:text-white transition-colors">Layanan</a>
+                <a href="#prinsip" class="hover:text-white transition-colors">Prinsip</a>
             </nav>
 
             <!-- CTA WA -->
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/6285890160276?text=Halo%20Reqra,%20saya%20tertarik%20konsultasi%20kebutuhan%20pembuatan%20software/sistem/media."
+                <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20konsultasi%20kebutuhan%20proyek%20bersama%20Reqra."
                     target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors shadow-sm">
                     <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
-                    <span>Diskusi Proyek</span>
+                    <span>Konsultasi WhatsApp</span>
                 </a>
             </div>
         </div>
@@ -140,10 +154,10 @@
     <main class="flex-1">
 
         <!-- Hero Section -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-16">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-14">
             <div class="max-w-3xl">
                 <!-- Status signal & Author badge -->
-                <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono mb-6">
+                <div class="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono mb-5">
                     <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                     <span class="font-bold text-white">Farhan Ramadhan</span>
                     <span class="text-slate-600">&bull;</span>
@@ -151,355 +165,349 @@
                 </div>
 
                 <!-- Headline -->
-                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
-                    Halo, saya Farhan Ramadhan. Saya merekayasa software fungsional, otomasi sistem bisnis, dan media visual yang langsung bekerja.
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.18] mb-5">
+                    Saya membangun software fungsional, otomasi WhatsApp, dan media visual yang bekerja langsung untuk bisnis Anda.
                 </h1>
 
                 <!-- Subtitle -->
-                <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
-                    Sebagai software engineer dan creator di balik Reqra, fokus saya adalah memecahkan hambatan operasional dan komunikasi bisnis Anda secara konkret. Mulai dari sistem web production-ready, engine WhatsApp CRM multi-agen, motion graphic dinamis, hingga tata kelola konten sosial media tanpa kerumitan yang sia-sia.
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-7">
+                    Fokus saya adalah menyelesaikan bottleneck operasional secara konkret: platform CRM multi-agen, web app bisnis teruji di server produksi, animasi motion graphic dinamis, serta strategi konten sosial media tanpa kerumitan yang sia-sia.
                 </p>
 
-                <!-- Action buttons -->
-                <div class="flex flex-wrap items-center gap-3 sm:gap-4">
-                    <a href="#proyek"
-                        class="px-5 py-2.5 rounded-lg bg-slate-100 text-slate-950 font-semibold text-sm hover:bg-white transition-colors flex items-center gap-2">
-                        <span>Eksplorasi 6 Showcase Proyek</span>
-                        <i class="fa-solid fa-arrow-down text-xs"></i>
-                    </a>
-                    <a href="#tentang"
-                        class="px-5 py-2.5 rounded-lg bg-[#141822] text-slate-200 border border-[#232a3a] font-medium text-sm hover:border-slate-500 hover:text-white transition-colors flex items-center gap-2">
-                        <i class="fa-solid fa-user text-emerald-400 text-xs"></i>
-                        <span>Profil Farhan</span>
-                    </a>
-                    <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20konsultasi%20kebutuhan%20proyek%20bersama%20Anda."
+                <!-- Action buttons (All direct to WhatsApp or smooth scroll) -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20ingin%20konsultasi%20solusi%20sistem%20dan%20media%20untuk%20bisnis%20saya."
                         target="_blank" rel="noopener noreferrer"
-                        class="px-4 py-2.5 rounded-lg text-slate-400 hover:text-white font-mono text-xs flex items-center gap-1.5 transition-colors">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                        <span>WA: 0858-9016-0276</span>
+                        class="px-5 py-2.5 rounded-lg bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition-colors flex items-center gap-2 shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Mulai Konsultasi via WhatsApp</span>
+                    </a>
+                    <a href="#proyek"
+                        class="px-5 py-2.5 rounded-lg bg-[#141822] text-slate-200 border border-[#232a3a] font-medium text-sm hover:border-slate-500 hover:text-white transition-colors flex items-center gap-2">
+                        <span>Eksplorasi Karya & Showcase</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Key Facts / Real Metrics -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-[#1c2230]">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-8 border-t border-[#1c2230]">
+                <div>
+                    <div class="font-mono text-2xl font-bold text-sky-400">Reqra CRM</div>
+                    <div class="text-xs text-slate-400 mt-0.5">Flagship WhatsApp Multi-Agent</div>
+                </div>
                 <div>
                     <div class="font-mono text-2xl font-bold text-white">6 Showcase</div>
-                    <div class="text-xs text-slate-400 mt-1">Sistem & layanan dengan showcase tersendiri</div>
+                    <div class="text-xs text-slate-400 mt-0.5">Beroperasi aktif di server live</div>
                 </div>
                 <div>
-                    <div class="font-mono text-2xl font-bold text-white">Live Production</div>
-                    <div class="text-xs text-slate-400 mt-1">Web App, CRM WhatsApp & Sistem Gudang</div>
+                    <div class="font-mono text-2xl font-bold text-purple-400">Motion Studio</div>
+                    <div class="text-xs text-slate-400 mt-0.5">Reels iklan & kinetic typography</div>
                 </div>
                 <div>
-                    <div class="font-mono text-2xl font-bold text-white">Motion Studio</div>
-                    <div class="text-xs text-slate-400 mt-1">Animasi dinamis & Reels high-retention</div>
-                </div>
-                <div>
-                    <div class="font-mono text-2xl font-bold text-white">Zero Bloat</div>
-                    <div class="text-xs text-slate-400 mt-1">Fokus fungsi inti & keandalan performa</div>
+                    <div class="font-mono text-2xl font-bold text-emerald-400">Zero Bloat</div>
+                    <div class="text-xs text-slate-400 mt-0.5">Performa cepat & data mandiri</div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Showcase Section -->
-        <section id="proyek" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 border-t border-[#1c2230]">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <section id="proyek" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 border-t border-[#1c2230]">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
                 <div>
-                    <h2 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-2">Pilar Portofolio & Karya Nyata</h2>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Koleksi Showcase Sistem & Layanan</h3>
+                    <h2 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-2">Pilar Portofolio</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Showcase Sistem & Media Kreatif</h3>
                 </div>
-                <p class="text-sm text-slate-400 max-w-md">
-                    Setiap sistem dan spesialisasi di bawah ini memiliki showcase tersendiri lengkap dengan gambaran arsitektur sistem dan simulasi interaktif.
-                </p>
+
+                <!-- Interactive Category Filter Tabs -->
+                <div class="flex items-center gap-1.5 p-1 bg-[#12151e] border border-[#1f2533] rounded-xl text-xs font-mono">
+                    <button onclick="filterShowcase('all')" id="filter-all" class="filter-btn active px-3 py-1.5 rounded-lg transition">Semua (6)</button>
+                    <button onclick="filterShowcase('system')" id="filter-system" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Sistem & CRM</button>
+                    <button onclick="filterShowcase('media')" id="filter-media" class="filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Media & Kreatif</button>
+                </div>
             </div>
 
-            <!-- Project Grid (6 Showcase Cards) -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-                <!-- 1. HAFZONE -->
-                <article class="card-surface rounded-2xl overflow-hidden flex flex-col justify-between group">
-                    <div>
-                        <!-- Overview Image Preview -->
-                        <a href="hafzone-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/9]">
-                            <img src="assets/images/hafzone-overview.png" alt="Gambaran Sistem Hafzone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute top-3 left-3">
-                                <span class="tech-pill text-emerald-300 bg-emerald-950/80 border-emerald-800/80 backdrop-blur-sm">
-                                    <i class="fa-solid fa-circle-check text-[10px]"></i> Live Web App
-                                </span>
-                            </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 border border-slate-700/80 backdrop-blur-sm">Islamic EdTech</span>
-                            </div>
-                        </a>
-
-                        <div class="p-6 sm:p-7">
-                            <h4 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-                                Hafzone App
-                            </h4>
-                            <p class="text-xs font-mono text-slate-400 mb-3">Ruang Evaluasi Hafalan & Bank Soal Mushaf Madinah 30 Juz</p>
-                            <p class="text-sm text-slate-300 leading-relaxed mb-5">
-                                Platform bank soal dan evaluasi ujian tahfidz berstandar Mushaf Madinah 30 Juz (604 halaman). Dilengkapi generator soal acak berbobot 1/2 juz awal/akhir, dropdown surat & ayat, timer soal digital 40 detik dengan bel 3x, dan ekspor pesan WhatsApp instan.
-                            </p>
-
-                            <div class="flex flex-wrap gap-2 mb-2">
-                                <span class="tech-pill">JavaScript ES6+</span>
-                                <span class="tech-pill">Tailwind CSS</span>
-                                <span class="tech-pill">Timer 40s</span>
-                                <span class="tech-pill">Mushaf Madinah API</span>
-                                <span class="tech-pill">WA Formatter</span>
-                            </div>
+            <!-- 1. FLAGSHIP PROJECT: REQRA CRM (Highlighted Priority Spotlight) -->
+            <article class="showcase-card flagship-surface rounded-2xl overflow-hidden mb-8 group" data-category="system">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+                    <!-- Visual Image Banner -->
+                    <div class="lg:col-span-7 relative bg-[#090b10] border-b lg:border-b-0 lg:border-r border-[#1f2533] flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/jwdpolo-overview.png" alt="Arsitektur Reqra CRM" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300 min-h-[260px] sm:min-h-[340px]">
+                        <div class="absolute top-4 left-4 flex items-center gap-2">
+                            <span class="tech-pill text-sky-300 bg-sky-950/90 border-sky-700/80 backdrop-blur-md">
+                                <i class="fa-solid fa-crown text-[10px] text-amber-400"></i> PROYEK UTAMA • FLAGSHIP
+                            </span>
+                            <span class="tech-pill text-emerald-300 bg-emerald-950/90 border-emerald-800/80 backdrop-blur-md">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i> Live Enterprise
+                            </span>
                         </div>
                     </div>
 
-                    <div class="p-6 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-3 mt-4">
-                        <a href="hafzone-showcase.html"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors pt-4">
-                            <span>Buka Showcase Hafzone</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <a href="https://app.reqra.my.id/mhq" target="_blank" rel="noopener noreferrer"
-                            class="text-xs font-mono text-slate-400 hover:text-white pt-4 flex items-center gap-1.5 transition-colors">
-                            <span>Live App</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- 2. SIM TAHFIDZ -->
-                <article class="card-surface rounded-2xl overflow-hidden flex flex-col justify-between group">
-                    <div>
-                        <!-- Overview Image Preview -->
-                        <a href="tahfidz-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/9]">
-                            <img src="assets/images/tahfidz-overview.png" alt="Gambaran Sistem SIM Tahfidz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute top-3 left-3">
-                                <span class="tech-pill text-emerald-300 bg-emerald-950/80 border-emerald-800/80 backdrop-blur-sm">
-                                    <i class="fa-solid fa-circle-check text-[10px]"></i> Enterprise System
-                                </span>
+                    <!-- Details & Narrative -->
+                    <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-sky-400 font-bold uppercase tracking-wider mb-1">
+                                Solusi Komunikasi Bisnis #1
                             </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 border border-slate-700/80 backdrop-blur-sm">Pesantren ERP</span>
-                            </div>
-                        </a>
-
-                        <div class="p-6 sm:p-7">
-                            <h4 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-                                SIM Tahfidz Terpadu
+                            <h4 class="text-2xl font-extrabold text-white mb-2 group-hover:text-sky-300 transition-colors">
+                                Reqra CRM
                             </h4>
-                            <p class="text-xs font-mono text-slate-400 mb-3">Sistem Informasi Manajemen Halaqah & Pesantren Al-Qur'an</p>
+                            <p class="text-xs font-mono text-slate-400 mb-4">Multi-Agent WhatsApp CRM & Sales Automation Suite</p>
+                            
                             <p class="text-sm text-slate-300 leading-relaxed mb-5">
-                                Solusi tata kelola pesantren dan rumah tahfidz. Mengelola pembagian santri ke kelompok halaqah, presensi digital, buku saku mutaba'ah harian (sabaq, sabqi, manzil), grafik tracking target 30 juz, administrasi syahriah SPP, hingga cetak rapor via DOMPDF.
+                                Platform omnichannel WhatsApp untuk puluhan agen CS/sales serentak dari satu nomor resmi. Dilengkapi cron worker follow-up 1 menit, responder otomatis, spintax anti-ban, dan broadcast massal terjadwal.
                             </p>
 
-                            <div class="flex flex-wrap gap-2 mb-2">
-                                <span class="tech-pill">PHP OOP</span>
-                                <span class="tech-pill">MySQL</span>
-                                <span class="tech-pill">DOMPDF Rapor</span>
-                                <span class="tech-pill">Multi-Halaqah</span>
-                                <span class="tech-pill">Mutaba'ah Liqo</span>
+                            <!-- Key Feature Bullets -->
+                            <div class="space-y-2 mb-6 text-xs text-slate-300 font-medium">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-sky-400"></i>
+                                    <span>1 Nomor WhatsApp Resmi untuk Puluhan Agen CS</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-sky-400"></i>
+                                    <span>Follow-Up Leads & Pengingat Tagihan Otomatis</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-check text-sky-400"></i>
+                                    <span>Spintax Anti-Banned & Broadcast Ratusan Grup</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="p-6 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-3 mt-4">
-                        <a href="tahfidz-showcase.html"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors pt-4">
-                            <span>Buka Showcase SIM Tahfidz</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                        <span class="text-xs text-slate-500 font-mono pt-4">Tata Kelola Pesantren</span>
-                    </div>
-                </article>
-
-                <!-- 3. JWD POLO APP -->
-                <article class="card-surface rounded-2xl overflow-hidden flex flex-col justify-between group">
-                    <div>
-                        <!-- Overview Image Preview -->
-                        <a href="jwdpolo-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/9]">
-                            <img src="assets/images/jwdpolo-overview.png" alt="Gambaran Sistem WhatsApp CRM JWD Polo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute top-3 left-3">
-                                <span class="tech-pill text-sky-300 bg-sky-950/80 border-sky-800/80 backdrop-blur-sm">
-                                    <i class="fa-solid fa-circle-check text-[10px]"></i> Live Enterprise
-                                </span>
-                            </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 border border-slate-700/80 backdrop-blur-sm">WhatsApp CRM</span>
-                            </div>
-                        </a>
-
-                        <div class="p-6 sm:p-7">
-                            <h4 class="text-xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">
-                                JWD Polo App
-                            </h4>
-                            <p class="text-xs font-mono text-slate-400 mb-3">Multi-Agent WhatsApp CRM & Broadcast Automation Suite</p>
-                            <p class="text-sm text-slate-300 leading-relaxed mb-5">
-                                Platform omnichannel WhatsApp resmi untuk puluhan agen CS/sales serentak. Dilengkapi alur follow-up berkala dengan 1-minute cron worker, deteksi pendaftaran, reminder otomatis, spintax anti-ban, dan broadcast massal terjadwal ke puluhan grup.
-                            </p>
-
-                            <div class="flex flex-wrap gap-2 mb-2">
+                            <div class="flex flex-wrap gap-1.5 mb-6">
                                 <span class="tech-pill">PHP 8.2</span>
                                 <span class="tech-pill">MySQL</span>
                                 <span class="tech-pill">Baileys WebSocket</span>
-                                <span class="tech-pill">Alpine.js</span>
-                                <span class="tech-pill">Cron Engine 1m</span>
+                                <span class="tech-pill">Cron 1m</span>
+                                <span class="tech-pill">Anti-Ban</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#1e2536] flex flex-wrap items-center gap-3">
+                            <a href="reqra-crm-showcase.html"
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-500 text-slate-950 font-bold text-xs hover:bg-sky-400 transition-colors shadow-sm">
+                                <span>Buka Showcase Reqra CRM</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                            <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20implementasi%20Reqra%20CRM%20WhatsApp%20untuk%20bisnis%20kami."
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#141822] text-slate-300 border border-[#232a3a] text-xs hover:text-white transition-colors">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                                <span>Konsultasi CRM via WA</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Grid for Remaining 5 Showcases -->
+            <div id="showcase-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 2. HAFZONE APP -->
+                <article class="showcase-card card-surface rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="system">
+                    <div>
+                        <a href="hafzone-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/10]">
+                            <img src="assets/images/hafzone-overview.png" alt="Hafzone Overview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute top-3 left-3 tech-pill text-emerald-300 bg-emerald-950/80 border-emerald-800/80 backdrop-blur-sm">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i> Live Web App
+                            </span>
+                        </a>
+
+                        <div class="p-5">
+                            <h4 class="text-lg font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                Hafzone App
+                            </h4>
+                            <p class="text-xs font-mono text-slate-400 mb-3">Bank Soal & Ujian Tahfidz Madinah 30 Juz</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Platform bank soal 604 halaman Mushaf Madinah dengan generator acak 1/2 juz, timer 40 detik, bunyi bel 3x, dan format WhatsApp instan.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-2">
+                                <span class="tech-pill">JS ES6+</span>
+                                <span class="tech-pill">Timer 40s</span>
+                                <span class="tech-pill">604 Hal</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-6 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-3 mt-4">
-                        <a href="jwdpolo-showcase.html"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-sky-300 transition-colors pt-4">
-                            <span>Buka Showcase JWD Polo CRM</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <div class="p-5 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-2 mt-2">
+                        <a href="hafzone-showcase.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition pt-3">
+                            <span>Buka Showcase</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
-                        <span class="text-xs text-slate-500 font-mono pt-4">Enterprise Suite</span>
+                        <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20dengan%20sistem%20Hafzone."
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-xs text-slate-400 hover:text-white pt-3 flex items-center gap-1 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>Tanya WA</span>
+                        </a>
                     </div>
                 </article>
 
-                <!-- 4. RE-STOCK -->
-                <article class="card-surface rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- 3. SIM TAHFIDZ TERPADU -->
+                <article class="showcase-card card-surface rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="system">
                     <div>
-                        <!-- Overview Image Preview -->
-                        <a href="restock-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/9]">
-                            <img src="assets/images/restock-overview.png" alt="Gambaran Sistem Inventori Re-Stock" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute top-3 left-3">
-                                <span class="tech-pill text-amber-300 bg-amber-950/80 border-amber-800/80 backdrop-blur-sm">
-                                    <i class="fa-solid fa-circle-check text-[10px]"></i> Live Production
-                                </span>
-                            </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 border border-slate-700/80 backdrop-blur-sm">Logistics & Supply</span>
-                            </div>
+                        <a href="tahfidz-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/10]">
+                            <img src="assets/images/tahfidz-overview.png" alt="SIM Tahfidz Overview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute top-3 left-3 tech-pill text-emerald-300 bg-emerald-950/80 border-emerald-800/80 backdrop-blur-sm">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i> Pesantren ERP
+                            </span>
                         </a>
 
-                        <div class="p-6 sm:p-7">
-                            <h4 class="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
-                                Re-Stock Inventory System
+                        <div class="p-5">
+                            <h4 class="text-lg font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                SIM Tahfidz Terpadu
                             </h4>
-                            <p class="text-xs font-mono text-slate-400 mb-3">Manajemen Mutasi Gudang & Pelaporan Otomatis Real-Time</p>
-                            <p class="text-sm text-slate-300 leading-relaxed mb-5">
-                                Aplikasi pengawasan stok gudang yang mengeliminasi selisih fisik vs sistem. Dilengkapi scanner barcode SKU, peringatan titik pemesanan ulang (reorder point alert), pencatatan alur mutasi, dan pencetakan Surat Jalan serta Berita Acara via DOMPDF.
+                            <p class="text-xs font-mono text-slate-400 mb-3">Tata Kelola Santri, Halaqah & Mutaba'ah</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Manajemen santri terpadu: plotting halaqah, buku mutaba'ah harian (sabaq, sabqi, manzil), tagihan SPP, dan cetak rapor via DOMPDF.
                             </p>
-
-                            <div class="flex flex-wrap gap-2 mb-2">
+                            <div class="flex flex-wrap gap-1.5 mb-2">
                                 <span class="tech-pill">PHP OOP</span>
                                 <span class="tech-pill">MySQL</span>
-                                <span class="tech-pill">Barcode Engine</span>
-                                <span class="tech-pill">Reorder Alert</span>
-                                <span class="tech-pill">DOMPDF Surat Jalan</span>
+                                <span class="tech-pill">DOMPDF</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-6 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-3 mt-4">
-                        <a href="restock-showcase.html"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-amber-400 hover:text-amber-300 transition-colors pt-4">
-                            <span>Buka Showcase Re-Stock</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <div class="p-5 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-2 mt-2">
+                        <a href="tahfidz-showcase.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition pt-3">
+                            <span>Buka Showcase</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
-                        <a href="https://restock.reqra.my.id" target="_blank" rel="noopener noreferrer"
-                            class="text-xs font-mono text-slate-400 hover:text-white pt-4 flex items-center gap-1.5 transition-colors">
-                            <span>Live Web</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20dengan%20sistem%20SIM%20Tahfidz."
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-xs text-slate-400 hover:text-white pt-3 flex items-center gap-1 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>Tanya WA</span>
                         </a>
                     </div>
                 </article>
 
-                <!-- 5. MOTION GRAPHIC (Replacing Desktop & AI Pipeline) -->
-                <article class="card-surface rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- 4. RE-STOCK INVENTORY -->
+                <article class="showcase-card card-surface rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="system">
                     <div>
-                        <!-- Overview Image Preview -->
-                        <a href="motion-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/9]">
-                            <img src="assets/images/motion-overview.png" alt="Gambaran Studio Motion Graphic Reqra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute top-3 left-3">
-                                <span class="tech-pill text-purple-300 bg-purple-950/80 border-purple-800/80 backdrop-blur-sm">
-                                    <i class="fa-solid fa-film text-[10px]"></i> Motion Studio
-                                </span>
-                            </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 border border-slate-700/80 backdrop-blur-sm">Visual & Video</span>
-                            </div>
+                        <a href="restock-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/10]">
+                            <img src="assets/images/restock-overview.png" alt="Re-Stock Overview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute top-3 left-3 tech-pill text-amber-300 bg-amber-950/80 border-amber-800/80 backdrop-blur-sm">
+                                <i class="fa-solid fa-circle-check text-[10px]"></i> Supply Chain
+                            </span>
                         </a>
 
-                        <div class="p-6 sm:p-7">
-                            <h4 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                        <div class="p-5">
+                            <h4 class="text-lg font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">
+                                Re-Stock Inventory
+                            </h4>
+                            <p class="text-xs font-mono text-slate-400 mb-3">Pengawasan Mutasi Gudang Real-Time</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Aplikasi eliminasi selisih stok fisik vs sistem dengan scanner barcode SKU, alert reorder point, dan cetak surat jalan DOMPDF.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-2">
+                                <span class="tech-pill">Barcode</span>
+                                <span class="tech-pill">Reorder Alert</span>
+                                <span class="tech-pill">Surat Jalan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-5 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-2 mt-2">
+                        <a href="restock-showcase.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 transition pt-3">
+                            <span>Buka Showcase</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                        <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20dengan%20sistem%20Re-Stock%20Inventory."
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-xs text-slate-400 hover:text-white pt-3 flex items-center gap-1 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>Tanya WA</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 5. MOTION GRAPHIC STUDIO -->
+                <article class="showcase-card card-surface rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="media">
+                    <div>
+                        <a href="motion-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/10]">
+                            <img src="assets/images/motion-overview.png" alt="Motion Graphic Overview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute top-3 left-3 tech-pill text-purple-300 bg-purple-950/80 border-purple-800/80 backdrop-blur-sm">
+                                <i class="fa-solid fa-film text-[10px]"></i> Motion Studio
+                            </span>
+                        </a>
+
+                        <div class="p-5">
+                            <h4 class="text-lg font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
                                 Motion Graphic Studio
                             </h4>
-                            <p class="text-xs font-mono text-slate-400 mb-3">Animasi Dinamis, Kinetic Typography & Video Promosi High-Retention</p>
-                            <p class="text-sm text-slate-300 leading-relaxed mb-5">
-                                Produksi konten video bergerak dengan pacing cepat dan visual memikat. Kami merancang video promosi produk berkonversi tinggi, animasi tipografi kajian edukasi, explainer alur sistem, hingga otomasi video berprogram via React Remotion & After Effects.
+                            <p class="text-xs font-mono text-slate-400 mb-3">Video Animasi Iklan & Kinetic Typography</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Produksi video pendek vertikal 9:16 berkonversi tinggi, sinkronisasi audio presisi, explainer alur produk, dan render otomatis Remotion.
                             </p>
-
-                            <div class="flex flex-wrap gap-2 mb-2">
-                                <span class="tech-pill">Motion Design</span>
-                                <span class="tech-pill">Kinetic Typography</span>
-                                <span class="tech-pill">Remotion (React)</span>
-                                <span class="tech-pill">Sound FX Mastering</span>
-                                <span class="tech-pill">4K/60fps Pipeline</span>
+                            <div class="flex flex-wrap gap-1.5 mb-2">
+                                <span class="tech-pill">Kinetic Text</span>
+                                <span class="tech-pill">4K/60fps</span>
+                                <span class="tech-pill">Remotion</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-6 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-3 mt-4">
-                        <a href="motion-showcase.html"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors pt-4">
-                            <span>Buka Showcase Motion Graphic</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <div class="p-5 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-2 mt-2">
+                        <a href="motion-showcase.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-400 hover:text-purple-300 transition pt-3">
+                            <span>Buka Showcase</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
-                        <span class="text-xs text-slate-500 font-mono pt-4">High-Retention Ads</span>
+                        <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20pembuatan%20Motion%20Graphic."
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-xs text-slate-400 hover:text-white pt-3 flex items-center gap-1 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>Tanya WA</span>
+                        </a>
                     </div>
                 </article>
 
-                <!-- 6. KELOLA SOSIAL MEDIA (Added as requested) -->
-                <article class="card-surface rounded-2xl overflow-hidden flex flex-col justify-between group">
+                <!-- 6. KELOLA SOSIAL MEDIA -->
+                <article class="showcase-card card-surface rounded-2xl overflow-hidden flex flex-col justify-between group" data-category="media">
                     <div>
-                        <!-- Overview Image Preview -->
-                        <a href="sosmed-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/9]">
-                            <img src="assets/images/sosmed-overview.png" alt="Gambaran Layanan Kelola Sosial Media" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="absolute top-3 left-3">
-                                <span class="tech-pill text-emerald-300 bg-emerald-950/80 border-emerald-800/80 backdrop-blur-sm">
-                                    <i class="fa-solid fa-chart-line text-[10px]"></i> Growth & Creative
-                                </span>
-                            </div>
-                            <div class="absolute top-3 right-3">
-                                <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 border border-slate-700/80 backdrop-blur-sm">Social Management</span>
-                            </div>
+                        <a href="sosmed-showcase.html" class="block relative overflow-hidden bg-[#090b10] border-b border-[#1f2533] aspect-[16/10]">
+                            <img src="assets/images/sosmed-overview.png" alt="Kelola Sosial Media Overview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="absolute top-3 left-3 tech-pill text-emerald-300 bg-emerald-950/80 border-emerald-800/80 backdrop-blur-sm">
+                                <i class="fa-solid fa-chart-line text-[10px]"></i> Growth & Creative
+                            </span>
                         </a>
 
-                        <div class="p-6 sm:p-7">
-                            <h4 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                        <div class="p-5">
+                            <h4 class="text-lg font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
                                 Kelola Sosial Media
                             </h4>
-                            <p class="text-xs font-mono text-slate-400 mb-3">Manajemen Konten Strategis, Pertumbuhan Audiens & Visual Craft</p>
-                            <p class="text-sm text-slate-300 leading-relaxed mb-5">
-                                Solusi terpadu pengelolaan akun Instagram, TikTok, dan kanal digital bisnis Anda. Mencakup riset content pillar terstruktur, perancangan desain feed carousel eksklusif, video reels pendek, penulisan copywriting persuasif, dan evaluasi metrik bulanan.
+                            <p class="text-xs font-mono text-slate-400 mb-3">Strategi Konten, Desain Feed & Reels</p>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Manajemen akun Instagram & TikTok: riset 4 pilar konten, desain visual carousel eksklusif, penulisan copy persuasif, dan analitik bulanan.
                             </p>
-
-                            <div class="flex flex-wrap gap-2 mb-2">
-                                <span class="tech-pill">Content Pillar</span>
-                                <span class="tech-pill">Carousel Visual</span>
-                                <span class="tech-pill">Reels Production</span>
-                                <span class="tech-pill">Persuasive Copy</span>
-                                <span class="tech-pill">Growth Analytics</span>
+                            <div class="flex flex-wrap gap-1.5 mb-2">
+                                <span class="tech-pill">Carousel</span>
+                                <span class="tech-pill">Reels Growth</span>
+                                <span class="tech-pill">Editorial Plan</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-6 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-3 mt-4">
-                        <a href="sosmed-showcase.html"
-                            class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors pt-4">
-                            <span>Buka Showcase Kelola Sosmed</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                    <div class="p-5 pt-0 border-t border-[#1e2536] flex items-center justify-between gap-2 mt-2">
+                        <a href="sosmed-showcase.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition pt-3">
+                            <span>Buka Showcase</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </a>
-                        <span class="text-xs text-slate-500 font-mono pt-4">Full Management</span>
+                        <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20layanan%20Kelola%20Sosial%20Media."
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-xs text-slate-400 hover:text-white pt-3 flex items-center gap-1 transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>Tanya WA</span>
+                        </a>
                     </div>
                 </article>
 
             </div>
         </section>
 
-        <!-- About Farhan Ramadhan Section -->
-        <section id="tentang" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 border-t border-[#1c2230]">
+        <!-- About Farhan Ramadhan Section (Simple, Sharp, No GitHub) -->
+        <section id="tentang" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 border-t border-[#1c2230]">
             <div class="card-surface rounded-2xl p-6 sm:p-10 border border-[#232b3d] bg-gradient-to-br from-[#121622] via-[#0d1017] to-[#090b10] relative overflow-hidden">
                 <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 relative z-10">
                     <div class="max-w-2xl">
@@ -510,149 +518,138 @@
                         <h3 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
                             Farhan Ramadhan
                         </h3>
-                        <p class="text-sm sm:text-base text-emerald-400 font-mono mb-5 font-semibold">
+                        <p class="text-sm sm:text-base text-emerald-400 font-mono mb-4 font-semibold">
                             Software Engineer, Systems Architect & Creative Technologist
                         </p>
                         <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                            Saya membangun sistem perangkat lunak yang berfokus pada solusi praktis: tidak ada baris kode yang ditulis untuk sekadar tren, melainkan untuk keandalan dan kecepatan di server produksi. Portofolio di atas adalah bukti nyata dari arsitektur yang aktif digunakan di dunia nyata, mulai dari tata kelola ratusan santri tahfidz, ratusan transaksi inventori gudang, hingga sistem CRM WhatsApp dengan ribuan pesan per hari.
+                            Fokus saya sederhana: membangun teknologi yang langsung menyelesaikan hambatan operasional bisnis Anda. Setiap baris kode ditulis untuk keandalan dan kecepatan di server produksi nyata, bukan sekadar prototipe konsep.
                         </p>
                         <p class="text-sm text-slate-400 leading-relaxed mb-6">
-                            Di samping rekayasa kode, saya mengintegrasikan keahlian motion design dan strategi konten visual agar teknologi yang dibangun memiliki daya tarik visual yang kuat dan mampu berkomunikasi dengan audiens bisnis Anda.
+                            Menggabungkan rekayasa backend dengan sentuhan visual motion design dan strategi konten sosial media agar produk Anda bekerja andal sekaligus memikat perhatian pelanggan.
                         </p>
 
                         <!-- Highlights / Badges -->
-                        <div class="flex flex-wrap gap-2.5">
-                            <span class="tech-pill text-white"><i class="fa-solid fa-code text-emerald-400"></i> Full-Stack Architecture</span>
-                            <span class="tech-pill text-white"><i class="fa-brands fa-whatsapp text-sky-400"></i> WebSocket Automation</span>
-                            <span class="tech-pill text-white"><i class="fa-solid fa-film text-purple-400"></i> High-Retention Motion</span>
-                            <span class="tech-pill text-white"><i class="fa-solid fa-chart-line text-amber-400"></i> Growth & Content Strategy</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-pill text-white"><i class="fa-solid fa-code text-emerald-400"></i> Full-Stack Web</span>
+                            <span class="tech-pill text-white"><i class="fa-brands fa-whatsapp text-sky-400"></i> WhatsApp Automation</span>
+                            <span class="tech-pill text-white"><i class="fa-solid fa-film text-purple-400"></i> Motion Graphic</span>
+                            <span class="tech-pill text-white"><i class="fa-solid fa-chart-line text-amber-400"></i> Growth Content</span>
                         </div>
                     </div>
 
-                    <!-- Direct Connect Box -->
-                    <div class="w-full lg:w-80 shrink-0 bg-[#090c12]/90 p-6 rounded-xl border border-slate-800 text-center">
-                        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-sky-500/20 border border-emerald-500/30 flex items-center justify-center mx-auto mb-4 text-emerald-400">
-                            <span class="font-mono font-black text-2xl">FR</span>
+                    <!-- Direct Connect Card -->
+                    <div class="w-full lg:w-72 shrink-0 bg-[#090c12]/90 p-6 rounded-xl border border-slate-800 text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-sky-500/20 border border-emerald-500/30 flex items-center justify-center mx-auto mb-3 text-emerald-400 font-mono font-black text-xl">
+                            FR
                         </div>
                         <h4 class="font-bold text-white text-base">Farhan Ramadhan</h4>
-                        <p class="text-xs font-mono text-slate-400 mb-4">reqra.my.id &bull; Jakarta / ID</p>
+                        <p class="text-xs font-mono text-slate-400 mb-5">Lead Engineer &bull; Reqra Studio</p>
                         
-                        <div class="space-y-2.5">
-                            <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20diskusi%20proyek%20bersama%20Anda."
-                                target="_blank" rel="noopener noreferrer"
-                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-500 text-slate-950 font-bold text-xs hover:bg-emerald-400 transition">
-                                <i class="fa-brands fa-whatsapp text-sm"></i>
-                                <span>Hubungi Farhan via WA</span>
-                            </a>
-                            <a href="https://github.com/RMDN11" target="_blank" rel="noopener noreferrer"
-                                class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#141822] text-slate-300 font-mono text-xs hover:text-white border border-[#232a3a] transition">
-                                <i class="fa-brands fa-github text-sm"></i>
-                                <span>GitHub: @RMDN11</span>
-                            </a>
-                        </div>
+                        <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20diskusi%20proyek%20bersama%20Anda."
+                            target="_blank" rel="noopener noreferrer"
+                            class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-500 text-slate-950 font-bold text-xs hover:bg-emerald-400 transition shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Hubungi Farhan via WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Engineering & Creative Capabilities -->
-        <section id="kapabilitas" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 border-t border-[#1c2230]">
-            <div class="mb-10">
+        <!-- Capabilities Section -->
+        <section id="kapabilitas" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 border-t border-[#1c2230]">
+            <div class="mb-8">
                 <h2 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-2">Layanan & Spesialisasi</h2>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Solusi Terpadu yang Reqra Hadirkan</h3>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Solusi Terpadu Reqra</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1 -->
-                <div class="card-surface rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="card-surface rounded-xl p-5">
+                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1.5">Reqra CRM WhatsApp</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Inbox multi-agen, antrean broadcast terjadwal anti-ban, dan automasi follow-up leads dengan cron engine.
+                    </p>
+                </div>
+
+                <div class="card-surface rounded-xl p-5">
+                    <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
                         <i class="fa-solid fa-code text-base"></i>
                     </div>
-                    <h4 class="text-base font-bold text-white mb-2">Aplikasi Web Kustom</h4>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Sistem informasi internal, portal manajemen lembaga pesantren, dan platform inventori bisnis yang dirancang adaptif sesuai proses kerja nyata Anda.
+                    <h4 class="text-base font-bold text-white mb-1.5">Aplikasi Web Kustom</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Sistem informasi internal, tata kelola pesantren, dan platform inventori gudang yang disesuaikan proses kerja nyata.
                     </p>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="card-surface rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-5">
-                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                    </div>
-                    <h4 class="text-base font-bold text-white mb-2">Otomasi WhatsApp & CRM</h4>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Integrasi WhatsApp API & WebSocket multi-agen, antrean broadcast terjadwal anti-ban, serta alur follow-up leads otomatis dengan cron engine.
-                    </p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="card-surface rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-5">
+                <div class="card-surface rounded-xl p-5">
+                    <div class="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
                         <i class="fa-solid fa-film text-base"></i>
                     </div>
-                    <h4 class="text-base font-bold text-white mb-2">Motion Graphic Studio</h4>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Produksi video animasi iklan vertikal 9:16, kinetic typography kajian edukatif, explainer alur produk, serta otomasi video via framework Remotion React.
+                    <h4 class="text-base font-bold text-white mb-1.5">Motion Graphic Studio</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Video iklan vertikal 9:16, kinetic typography dinamis, explainer produk, serta otomasi video via Remotion.
                     </p>
                 </div>
 
-                <!-- Service 4 -->
-                <div class="card-surface rounded-xl p-6">
-                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-5">
+                <div class="card-surface rounded-xl p-5">
+                    <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
                         <i class="fa-solid fa-hashtag text-base"></i>
                     </div>
-                    <h4 class="text-base font-bold text-white mb-2">Kelola Sosial Media</h4>
-                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                        Pengelolaan akun Instagram & TikTok menyeluruh: perancangan 4 pilar konten, desain carousel visual, penulisan caption persuasif, dan analitik performa.
+                    <h4 class="text-base font-bold text-white mb-1.5">Kelola Sosial Media</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Manajemen konten Instagram & TikTok: riset 4 pilar konten, desain carousel visual, copywriting, dan analitik.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Principles -->
-        <section id="prinsip" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 border-t border-[#1c2230]">
-            <div class="mb-10">
-                <h2 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-2">Prinsip Rekayasa & Kreatif</h2>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Standar Eksekusi Reqra</h3>
+        <section id="prinsip" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 border-t border-[#1c2230]">
+            <div class="mb-8">
+                <h2 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-2">Prinsip Kerja</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Standar Eksekusi</h3>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="card-surface rounded-xl p-6 flex gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-surface rounded-xl p-5 flex gap-4">
                     <div class="font-mono text-emerald-400 font-bold text-lg">01</div>
                     <div>
-                        <h4 class="text-base font-bold text-white mb-1">Masalah Nyata di Atas Tren Sesaat</h4>
-                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                            Kami tidak sekadar memasukkan fitur kosmetik. Setiap baris kode dan setiap frame animasi dibuat untuk menyelesaikan hambatan operasional dan komunikasi secara konkret.
+                        <h4 class="text-sm font-bold text-white mb-1">Masalah Nyata di Atas Tren</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Setiap baris kode dan frame animasi dibuat untuk memecahkan hambatan operasional dan komunikasi bisnis secara terukur.
                         </p>
                     </div>
                 </div>
 
-                <div class="card-surface rounded-xl p-6 flex gap-4">
+                <div class="card-surface rounded-xl p-5 flex gap-4">
                     <div class="font-mono text-emerald-400 font-bold text-lg">02</div>
                     <div>
-                        <h4 class="text-base font-bold text-white mb-1">Visual Menarik, Tajam & Berkarakter</h4>
-                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                            Menghindari tampilan umum murahan dan template pasaran. Desain kami memiliki identitas visual yang khas, tipografi terukur, dan hierarki informasi yang enak dibaca.
+                        <h4 class="text-sm font-bold text-white mb-1">Visual Menarik & Berkarakter</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Bebas dari template pasaran. Desain kami memiliki identitas visual yang khas, bersih, dan mudah dicerna pelanggan.
                         </p>
                     </div>
                 </div>
 
-                <div class="card-surface rounded-xl p-6 flex gap-4">
+                <div class="card-surface rounded-xl p-5 flex gap-4">
                     <div class="font-mono text-emerald-400 font-bold text-lg">03</div>
                     <div>
-                        <h4 class="text-base font-bold text-white mb-1">Kecepatan & Kinerja Ringan</h4>
-                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                            Memangkas ketergantungan pada library yang membengkak. Aplikasi yang kami buat dipastikan cepat diakses dan video diproduksi dengan kompresi bitrate paling efisien.
+                        <h4 class="text-sm font-bold text-white mb-1">Kecepatan & Ringan</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Memangkas ketergantungan pada library berlebih agar aplikasi cepat dimuat dan video dioptimalkan pada bitrate paling efisien.
                         </p>
                     </div>
                 </div>
 
-                <div class="card-surface rounded-xl p-6 flex gap-4">
+                <div class="card-surface rounded-xl p-5 flex gap-4">
                     <div class="font-mono text-emerald-400 font-bold text-lg">04</div>
                     <div>
-                        <h4 class="text-base font-bold text-white mb-1">Kedaulatan & Kepemilikan Klien</h4>
-                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                            Aset digital, database, dan materi konten sepenuhnya menjadi hak milik Anda tanpa keterikatan lisensi sewa bulanan yang memberatkan kelangsungan bisnis.
+                        <h4 class="text-sm font-bold text-white mb-1">Kedaulatan Milik Klien</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Database dan source code sepenuhnya menjadi hak milik Anda tanpa terkunci ketergantungan sewa lisensi pihak ketiga.
                         </p>
                     </div>
                 </div>
@@ -660,20 +657,20 @@
         </section>
 
         <!-- Final CTA Box -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-12 text-center relative overflow-hidden">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+            <div class="bg-gradient-to-b from-[#141824] to-[#0e111a] border border-[#232b3d] rounded-2xl p-8 sm:p-10 text-center relative overflow-hidden">
                 <div class="max-w-2xl mx-auto relative z-10">
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
-                        Punya ide sistem, butuh motion graphic, atau ingin sosial media brand Anda dikelola secara profesional?
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
+                        Punya ide sistem, butuh otomasi CRM, atau media visual?
                     </h3>
-                    <p class="text-sm sm:text-base text-slate-400 leading-relaxed mb-8">
-                        Ceritakan kebutuhan spesifik Anda kepada tim Reqra. Mari diskusikan solusi perangkat lunak atau strategi media visual yang tepat sasaran.
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Mari diskusikan alur kerja atau kebutuhan proyek Anda langsung bersama Farhan Ramadhan.
                     </p>
-                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Reqra.%20Saya%20ingin%20konsultasi%20mengenai%20kebutuhan%20proyek%20kami."
+                    <a href="https://wa.me/6285890160276?text=Bismillah,%20halo%20Farhan.%20Saya%20ingin%20konsultasi%20mengenai%20kebutuhan%20proyek%20kami."
                         target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm sm:text-base hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/10">
+                        class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/10">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
-                        <span>Mulai Konsultasi via WhatsApp (0858-9016-0276)</span>
+                        <span>Mulai Konsultasi Langsung via WhatsApp</span>
                     </a>
                 </div>
             </div>
@@ -689,16 +686,17 @@
                 <div class="flex items-center gap-2">
                     <span class="font-extrabold tracking-tight text-white text-sm">REQRA</span>
                     <span class="text-slate-600 text-xs">•</span>
-                    <span class="text-xs text-slate-400">Digital Product, Automation & Creative Media Studio</span>
+                    <span class="text-xs text-slate-400">Direkayasa oleh Farhan Ramadhan</span>
                 </div>
             </div>
 
-            <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400">
+            <!-- Active Showcase Links -->
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-mono text-slate-400">
+                <a href="reqra-crm-showcase.html" class="hover:text-sky-400 transition font-bold text-slate-200">Reqra CRM</a>
+                <span>&bull;</span>
                 <a href="hafzone-showcase.html" class="hover:text-emerald-400 transition">Hafzone</a>
                 <span>&bull;</span>
                 <a href="tahfidz-showcase.html" class="hover:text-emerald-400 transition">SIM Tahfidz</a>
-                <span>&bull;</span>
-                <a href="jwdpolo-showcase.html" class="hover:text-sky-400 transition">JWD Polo CRM</a>
                 <span>&bull;</span>
                 <a href="restock-showcase.html" class="hover:text-amber-400 transition">Re-Stock</a>
                 <span>&bull;</span>
@@ -707,11 +705,48 @@
                 <a href="sosmed-showcase.html" class="hover:text-emerald-400 transition">Kelola Sosmed</a>
             </div>
 
-            <div class="text-xs text-slate-500 font-mono text-center md:text-right">
-                reqra.my.id &bull; Direkayasa oleh <span class="text-slate-300 font-semibold">Farhan Ramadhan</span> &bull; 2026.
+            <!-- Active WhatsApp CTA -->
+            <div>
+                <a href="https://wa.me/6285890160276?text=Halo%20Farhan,%20saya%20tertarik%20konsultasi%20proyek."
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500 hover:text-slate-950 text-xs font-semibold transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Konsultasi WhatsApp</span>
+                </a>
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Filter Script -->
+    <script>
+        function filterShowcase(category) {
+            ['all', 'system', 'media'].forEach(cat => {
+                const btn = document.getElementById(`filter-${cat}`);
+                if (btn) {
+                    if (cat === category) {
+                        btn.className = 'filter-btn active px-3 py-1.5 rounded-lg transition';
+                    } else {
+                        btn.className = 'filter-btn px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+                    }
+                }
+            });
+
+            const cards = document.querySelectorAll('.showcase-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = '';
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.transition = 'opacity 0.25s ease';
+                        card.style.opacity = '1';
+                    }, 20);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 
